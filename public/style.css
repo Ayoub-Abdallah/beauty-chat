@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #222;
+}
+
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.chat {
+    height: 400px;
+    overflow: auto;
+    border: 1px solid #eee;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.message {
+    margin: 8px 0;
+}
+
+.message.user {
+    text-align: right;
+}
+
+.message.assistant {
+    text-align: left;
+}
+
+.message .bubble {
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 12px;
+    max-width: 75%;
+}
+
+.user .bubble {
+    background: #0078d4;
+    color: #fff;
+}
+
+.assistant .bubble {
+    background: #f1f1f1;
+    color: #111;
+}
+
+.controls {
+    margin-bottom: 8px;
+}
+
+.composer {
+    display: flex;
+    gap: 8px;
+}
+
+.composer input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.composer button {
+    padding: 10px 16px;
+    border: none;
+    background: #0078d4;
+    color: #fff;
+    border-radius: 6px;
+}
+
+.small {
+    font-size: 12px;
+    color: #666;
+    margin-top: 4px;
+}

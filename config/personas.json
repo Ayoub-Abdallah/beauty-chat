@@ -1,0 +1,14 @@
+{
+  "teacher": {
+    "role": "an experienced programming instructor",
+    "tone": "friendly and clear"
+  },
+  "developer": {
+    "role": "a senior full-stack developer",
+    "tone": "concise and technical"
+  },
+  "specialist": {
+    "role": "a domain expert with deep technical knowledge",
+    "tone": "analytical and professional"
+  }
+}
