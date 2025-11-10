@@ -1,72 +1,1211 @@
 [
-  {
-    "id": "nivea-soft-cream",
-    "title": "Crème Hydratante Nivea Soft",
-    "content": "Crème légère et rafraîchissante, idéale pour peau sèche et sensible. Enrichie en jojoba et vitamine E. Absorption rapide, texture non grasse. Prix: 1500 DA. Usage: matin et soir sur peau propre. Résultats visibles dès 7 jours.",
-    "tags": ["hydration", "nivea", "ترطيب", "peau sèche", "1500DA", "crème", "visage", "corps"],
-    "category": "skincare"
-  },
-  {
-    "id": "cerave-foaming-cleanser",
-    "title": "Gel Nettoyant CeraVe Moussant",
-    "content": "Nettoyant doux aux céramides et acide hyaluronique. Convient à tous types de peaux, même sensibles. Élimine impuretés sans dessécher. Prix: 2800 DA. Usage: matin et soir, masser sur peau humide puis rincer. Recommandé par dermatologues.",
-    "tags": ["nettoyant", "cerave", "تنظيف", "céramides", "2800DA", "gel", "peau sensible", "dermatologique"],
-    "category": "skincare"
-  },
-  {
-    "id": "ordinary-niacinamide",
-    "title": "Sérum The Ordinary Niacinamide 10%",
-    "content": "Sérum concentré pour réduire pores dilatés et contrôler sébum. Contient 10% niacinamide + zinc. Idéal peau mixte à grasse. Prix: 2300 DA. Usage: quelques gouttes le soir après nettoyage. Éviter contour des yeux.",
-    "tags": ["sérum", "ordinary", "سيروم", "niacinamide", "2300DA", "pores", "peau grasse", "zinc"],
-    "category": "skincare"
-  },
-  {
-    "id": "garnier-micellar-water",
-    "title": "Eau Micellaire Garnier Tout-en-1",
-    "content": "Démaquille, nettoie et apaise en un seul geste. Convient yeux sensibles et lentilles de contact. Sans rinçage, sans parfum. Prix: 1200 DA. Usage: appliquer sur coton, passer délicatement sur visage et yeux.",
-    "tags": ["démaquillant", "garnier", "إزالة المكياج", "micellaire", "1200DA", "yeux sensibles", "sans rinçage"],
-    "category": "skincare"
-  },
-  {
-    "id": "loreal-revitalift-serum",
-    "title": "Sérum Anti-Âge L'Oréal Revitalift",
-    "content": "Sérum puissant à l'acide hyaluronique et vitamine B5. Réduit rides et ridules, raffermit la peau. Pour peaux matures 30+. Prix: 3500 DA. Usage: 3-4 gouttes matin et soir sous la crème. Résultats visibles en 4 semaines.",
-    "tags": ["anti-âge", "loreal", "مكافحة الشيخوخة", "acide hyaluronique", "3500DA", "rides", "raffermissant", "30+"],
-    "category": "skincare"
-  },
-  {
-    "id": "bioderma-sensibio-h2o",
-    "title": "Bioderma Sensibio H2O",
-    "content": "Eau micellaire spécialement formulée pour peaux sensibles. Démaquille en douceur sans irritation. Apaise et respecte l'équilibre cutané. Prix: 2200 DA. Usage: sur coton, nettoyer visage et yeux sans frotter.",
-    "tags": ["bioderma", "sensibio", "حساسة", "eau micellaire", "2200DA", "peau sensible", "démaquillant", "apaisant"],
-    "category": "skincare"
-  },
-  {
-    "id": "eucerin-sun-cream",
-    "title": "Crème Solaire Eucerin SPF 50+",
-    "content": "Protection très haute contre UV, adapté visage et corps. Résistante à l'eau et transpiration. Texture légère, non comédogène. Prix: 2900 DA. Usage: appliquer généreusement 20min avant exposition, renouveler toutes les 2h.",
-    "tags": ["protection solaire", "eucerin", "حماية الشمس", "SPF50", "2900DA", "UV", "résistant eau", "visage corps"],
-    "category": "skincare"
-  },
-  {
-    "id": "kerastase-elixir-oil",
-    "title": "Huile Capillaire Kérastase Elixir Ultime",
-    "content": "Huile précieuse aux 4 huiles rares pour cheveux ternes et abîmés. Nourrit, protège et apporte brillance. Tous types cheveux. Prix: 4200 DA. Usage: quelques gouttes sur cheveux humides ou secs, éviter racines.",
-    "tags": ["cheveux", "kerastase", "شعر", "huile capillaire", "4200DA", "brillance", "nutrition", "abîmés"],
-    "category": "haircare"
-  },
-  {
-    "id": "moroccan-argan-oil",
-    "title": "Huile d'Argan Pure du Maroc",
-    "content": "Huile d'argan 100% pure et naturelle, riche en vitamine E et omégas. Multi-usage: visage, corps, cheveux, ongles. Propriétés anti-âge et nourrissantes. Prix: 1800 DA. Usage: quelques gouttes suffisent, matin ou soir.",
-    "tags": ["argan", "huile naturelle", "زيت الأركان", "multi-usage", "1800DA", "vitamine E", "naturel", "maroc"],
-    "category": "skincare"
-  },
-  {
-    "id": "vichy-thermal-water",
-    "title": "Eau Thermale Vichy",
-    "content": "Eau thermale apaisante et fortifiante, riche en 15 minéraux. Calme irritations et rougeurs. Convient peaux sensibles et réactives. Prix: 1600 DA. Usage: vaporiser à 20cm, laisser agir 30sec puis sécher délicatement.",
-    "tags": ["eau thermale", "vichy", "مياه حرارية", "apaisante", "1600DA", "minéraux", "irritations", "sensible"],
-    "category": "skincare"
-  }
+    {
+        "id": "nivea-soft-cream",
+        "title": "Crème Hydratante Nivea Soft",
+        "content": "Crème légère et rafraîchissante, idéale pour peau sèche et sensible. Enrichie en jojoba et vitamine E. Absorption rapide, texture non grasse. Prix: 1500 DA. Usage: matin et soir sur peau propre. Résultats visibles dès 7 jours.",
+        "tags": [
+            "hydration",
+            "nivea",
+            "ترطيب",
+            "peau sèche",
+            "1500DA",
+            "crème",
+            "visage",
+            "corps"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "cerave-foaming-cleanser",
+        "title": "Gel Nettoyant CeraVe Moussant",
+        "content": "Nettoyant doux aux céramides et acide hyaluronique. Convient à tous types de peaux, même sensibles. Élimine impuretés sans dessécher. Prix: 2800 DA. Usage: matin et soir, masser sur peau humide puis rincer. Recommandé par dermatologues.",
+        "tags": [
+            "nettoyant",
+            "cerave",
+            "تنظيف",
+            "céramides",
+            "2800DA",
+            "gel",
+            "peau sensible",
+            "dermatologique"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "ordinary-niacinamide",
+        "title": "Sérum The Ordinary Niacinamide 10%",
+        "content": "Sérum concentré pour réduire pores dilatés et contrôler sébum. Contient 10% niacinamide + zinc. Idéal peau mixte à grasse. Prix: 2300 DA. Usage: quelques gouttes le soir après nettoyage. Éviter contour des yeux.",
+        "tags": [
+            "sérum",
+            "ordinary",
+            "سيروم",
+            "niacinamide",
+            "2300DA",
+            "pores",
+            "peau grasse",
+            "zinc"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "garnier-micellar-water",
+        "title": "Eau Micellaire Garnier Tout-en-1",
+        "content": "Démaquille, nettoie et apaise en un seul geste. Convient yeux sensibles et lentilles de contact. Sans rinçage, sans parfum. Prix: 1200 DA. Usage: appliquer sur coton, passer délicatement sur visage et yeux.",
+        "tags": [
+            "démaquillant",
+            "garnier",
+            "إزالة المكياج",
+            "micellaire",
+            "1200DA",
+            "yeux sensibles",
+            "sans rinçage"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "loreal-revitalift-serum",
+        "title": "Sérum Anti-Âge L'Oréal Revitalift",
+        "content": "Sérum puissant à l'acide hyaluronique et vitamine B5. Réduit rides et ridules, raffermit la peau. Pour peaux matures 30+. Prix: 3500 DA. Usage: 3-4 gouttes matin et soir sous la crème. Résultats visibles en 4 semaines.",
+        "tags": [
+            "anti-âge",
+            "loreal",
+            "مكافحة الشيخوخة",
+            "acide hyaluronique",
+            "3500DA",
+            "rides",
+            "raffermissant",
+            "30+"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "bioderma-sensibio-h2o",
+        "title": "Bioderma Sensibio H2O",
+        "content": "Eau micellaire spécialement formulée pour peaux sensibles. Démaquille en douceur sans irritation. Apaise et respecte l'équilibre cutané. Prix: 2200 DA. Usage: sur coton, nettoyer visage et yeux sans frotter.",
+        "tags": [
+            "bioderma",
+            "sensibio",
+            "حساسة",
+            "eau micellaire",
+            "2200DA",
+            "peau sensible",
+            "démaquillant",
+            "apaisant"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "eucerin-sun-cream",
+        "title": "Crème Solaire Eucerin SPF 50+",
+        "content": "Protection très haute contre UV, adapté visage et corps. Résistante à l'eau et transpiration. Texture légère, non comédogène. Prix: 2900 DA. Usage: appliquer généreusement 20min avant exposition, renouveler toutes les 2h.",
+        "tags": [
+            "protection solaire",
+            "eucerin",
+            "حماية الشمس",
+            "SPF50",
+            "2900DA",
+            "UV",
+            "résistant eau",
+            "visage corps"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "kerastase-elixir-oil",
+        "title": "Huile Capillaire Kérastase Elixir Ultime",
+        "content": "Huile précieuse aux 4 huiles rares pour cheveux ternes et abîmés. Nourrit, protège et apporte brillance. Tous types cheveux. Prix: 4200 DA. Usage: quelques gouttes sur cheveux humides ou secs, éviter racines.",
+        "tags": [
+            "cheveux",
+            "kerastase",
+            "شعر",
+            "huile capillaire",
+            "4200DA",
+            "brillance",
+            "nutrition",
+            "abîmés"
+        ],
+        "category": "haircare"
+    },
+    {
+        "id": "moroccan-argan-oil",
+        "title": "Huile d'Argan Pure du Maroc",
+        "content": "Huile d'argan 100% pure et naturelle, riche en vitamine E et omégas. Multi-usage: visage, corps, cheveux, ongles. Propriétés anti-âge et nourrissantes. Prix: 1800 DA. Usage: quelques gouttes suffisent, matin ou soir.",
+        "tags": [
+            "argan",
+            "huile naturelle",
+            "زيت الأركان",
+            "multi-usage",
+            "1800DA",
+            "vitamine E",
+            "naturel",
+            "maroc"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "vichy-thermal-water",
+        "title": "Eau Thermale Vichy",
+        "content": "Eau thermale apaisante et fortifiante, riche en 15 minéraux. Calme irritations et rougeurs. Convient peaux sensibles et réactives. Prix: 1600 DA. Usage: vaporiser à 20cm, laisser agir 30sec puis sécher délicatement.",
+        "tags": [
+            "eau thermale",
+            "vichy",
+            "مياه حرارية",
+            "apaisante",
+            "1600DA",
+            "minéraux",
+            "irritations",
+            "sensible"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "la-roche-posay-toleriane",
+        "title": "La Roche-Posay Toleriane Caring Wash",
+        "content": "Gel nettoyant ultra-doux pour peaux sensibles et intolérantes. Sans savon, sans paraben, sans alcool. Formule minimaliste avec eau thermale. Prix: 3200 DA. Usage: matin et soir, masser délicatement puis rincer à l'eau tiède.",
+        "tags": [
+            "la roche posay",
+            "toleriane",
+            "تولريان",
+            "peau sensible",
+            "3200DA",
+            "nettoyant doux",
+            "hypoallergénique"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "avene-cleansing-foam",
+        "title": "Mousse Nettoyante Avène",
+        "content": "Mousse nettoyante douce à l'eau thermale d'Avène. Élimine maquillage et impuretés sans agresser. Convient peaux sensibles et normales. Prix: 2900 DA. Usage: appliquer sur visage humide, masser puis rincer abondamment.",
+        "tags": [
+            "avene",
+            "mousse",
+            "رغوة التنظيف",
+            "eau thermale",
+            "2900DA",
+            "nettoyage doux",
+            "sensible"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "neutrogena-hydra-boost",
+        "title": "Neutrogena Hydra Boost Gel-Crème",
+        "content": "Gel-crème hydratant à l'acide hyaluronique. Hydratation intense 24h pour peaux normales à mixtes. Texture légère non grasse. Prix: 2600 DA. Usage: matin et soir sur peau propre, éviter contour des yeux.",
+        "tags": [
+            "neutrogena",
+            "hydra boost",
+            "هيدرا بوست",
+            "acide hyaluronique",
+            "2600DA",
+            "gel crème",
+            "24h"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "olay-regenerist-serum",
+        "title": "Olay Regenerist Micro-Sculpting Serum",
+        "content": "Sérum anti-âge aux amino-peptides et niacinamide. Lisse rides et raffermit la peau. Pour peaux matures 25+. Prix: 4200 DA. Usage: 2-3 gouttes matin et soir avant crème hydratante.",
+        "tags": [
+            "olay",
+            "regenerist",
+            "ريجينريست",
+            "anti-âge",
+            "4200DA",
+            "peptides",
+            "raffermissant"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "vaseline-intensive-care",
+        "title": "Vaseline Intensive Care Body Lotion",
+        "content": "Lotion corporelle pour peaux très sèches. Formule à la vaseline pure et glycérine. Hydratation profonde et durable. Prix: 1400 DA. Usage: appliquer généreusement sur peau propre et sèche.",
+        "tags": [
+            "vaseline",
+            "intensive care",
+            "عناية مكثفة",
+            "corps",
+            "1400DA",
+            "peau sèche",
+            "glycérine"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "palmers-cocoa-butter",
+        "title": "Palmer's Cocoa Butter Formula",
+        "content": "Crème au beurre de cacao pour peaux sèches et vergetures. Riche en vitamine E. Idéale pendant et après grossesse. Prix: 1900 DA. Usage: masser 2 fois par jour sur zones concernées.",
+        "tags": [
+            "palmers",
+            "cocoa butter",
+            "زبدة الكاكاو",
+            "vergetures",
+            "1900DA",
+            "grossesse",
+            "vitamine E"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "dove-beauty-bar",
+        "title": "Pain de Toilette Dove Beauty Bar",
+        "content": "Pain nettoyant doux enrichi en crème hydratante. 1/4 de crème hydratante. Convient visage et corps, peaux sensibles. Prix: 350 DA. Usage: faire mousser avec eau, nettoyer puis rincer.",
+        "tags": [
+            "dove",
+            "beauty bar",
+            "صابونة دوف",
+            "crème hydratante",
+            "350DA",
+            "doux",
+            "sensible"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "johnson-baby-oil",
+        "title": "Huile Johnson's Baby",
+        "content": "Huile minérale pure pour bébés et adultes. Hydrate et protège la peau délicate. Hypoallergénique, testée par pédiatres. Prix: 800 DA. Usage: quelques gouttes sur peau légèrement humide.",
+        "tags": [
+            "johnsons",
+            "baby oil",
+            "زيت الأطفال",
+            "hypoallergénique",
+            "800DA",
+            "peau délicate",
+            "bébé"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "sebamed-cleansing-bar",
+        "title": "Pain Dermatologique Sebamed pH 5.5",
+        "content": "Pain de toilette au pH physiologique 5.5. Respecte le film hydrolipidique de la peau. Pour peaux sensibles et atopiques. Prix: 1200 DA. Usage: utiliser comme savon classique, éviter yeux.",
+        "tags": [
+            "sebamed",
+            "ph 5.5",
+            "درماتولوجي",
+            "peau atopique",
+            "1200DA",
+            "physiologique",
+            "sensible"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "eucerin-aquaphor",
+        "title": "Eucerin Aquaphor Pommade Réparatrice",
+        "content": "Pommade réparatrice pour peaux très sèches et irritées. Sans eau, crée barrière protectrice. Convient lèvres gercées, mains abîmées. Prix: 2100 DA. Usage: appliquer fine couche sur zone à traiter.",
+        "tags": [
+            "eucerin",
+            "aquaphor",
+            "أكوافور",
+            "réparatrice",
+            "2100DA",
+            "peau irritée",
+            "barrière"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "garnier-fructis-shampoo",
+        "title": "Shampooing Garnier Fructis Fortifiant",
+        "content": "Shampooing aux extraits de fruits pour cheveux fragiles. Formule sans paraben, enrichie en vitamines. Renforce et nourrit la fibre capillaire. Prix: 950 DA. Usage: appliquer sur cheveux mouillés, masser, rincer.",
+        "tags": [
+            "garnier",
+            "fructis",
+            "فروكتيس",
+            "fortifiant",
+            "950DA",
+            "cheveux fragiles",
+            "vitamines"
+        ],
+        "category": "haircare"
+    },
+    {
+        "id": "loreal-elvive-oil",
+        "title": "L'Oréal Elvive Huile Extraordinaire",
+        "content": "Huile nourrissante 6 huiles précieuses pour tous types de cheveux. Usage polyvalent: avant shampooing, sur longueurs sèches. Prix: 1600 DA. Usage: 2-3 pressions selon longueur cheveux.",
+        "tags": [
+            "loreal",
+            "elvive",
+            "إيلڤيڤ",
+            "huile extraordinaire",
+            "1600DA",
+            "6 huiles",
+            "nourrissante"
+        ],
+        "category": "haircare"
+    },
+    {
+        "id": "pantene-pro-v-mask",
+        "title": "Masque Pantene Pro-V Réparation Intensive",
+        "content": "Masque réparateur pour cheveux abîmés et cassants. Formule Pro-V aux vitamines et pro-vitamines. Répare 100 jours de dommages en 1 usage. Prix: 1100 DA. Usage: après shampooing, laisser poser 3min.",
+        "tags": [
+            "pantene",
+            "pro-v",
+            "برو-في",
+            "masque réparateur",
+            "1100DA",
+            "cheveux abîmés",
+            "vitamines"
+        ],
+        "category": "haircare"
+    },
+    {
+        "id": "schwarzkopf-gliss",
+        "title": "Schwarzkopf Gliss Sérum Réparateur",
+        "content": "Sérum réparateur instantané pour pointes fourchues et cheveux secs. Formule Liquid Keratin. Protection thermique jusqu'à 220°C. Prix: 1350 DA. Usage: sur cheveux humides ou secs, ne pas rincer.",
+        "tags": [
+            "schwarzkopf",
+            "gliss",
+            "غليس",
+            "sérum capillaire",
+            "1350DA",
+            "kératine",
+            "protection thermique"
+        ],
+        "category": "haircare"
+    },
+    {
+        "id": "head-shoulders-shampoo",
+        "title": "Head & Shoulders Shampooing Anti-Pelliculaire",
+        "content": "Shampooing médical au zinc pyrithione contre pellicules. Efficace dès la première utilisation. Convient usage quotidien, cuir chevelu sensible. Prix: 1200 DA. Usage: masser cuir chevelu, laisser agir 2min, rincer.",
+        "tags": [
+            "head shoulders",
+            "anti-pelliculaire",
+            "ضد القشرة",
+            "zinc pyrithione",
+            "1200DA",
+            "cuir chevelu",
+            "médical"
+        ],
+        "category": "haircare"
+    },
+    {
+        "id": "tresemme-keratin",
+        "title": "TRESemmé Keratin Smooth Shampooing",
+        "content": "Shampooing lissant à la kératine et huile d'argan. Contrôle frisottis jusqu'à 72h. Pour cheveux indisciplinés et frisés. Prix: 1050 DA. Usage: appliquer, masser, rincer, suivre avec après-shampooing.",
+        "tags": [
+            "tresemme",
+            "keratin smooth",
+            "كيراتين",
+            "lissant",
+            "1050DA",
+            "frisottis",
+            "argan"
+        ],
+        "category": "haircare"
+    },
+    {
+        "id": "sunsilk-coconut-shampoo",
+        "title": "Sunsilk Shampooing Coco & Vitamine E",
+        "content": "Shampooing nourrissant à l'huile de coco et vitamine E. Pour cheveux secs et ternes. Formule co-créée avec experts capillaires. Prix: 850 DA. Usage: masser sur cheveux mouillés, rincer abondamment.",
+        "tags": [
+            "sunsilk",
+            "coconut",
+            "جوز الهند",
+            "vitamine E",
+            "850DA",
+            "cheveux secs",
+            "nourrissant"
+        ],
+        "category": "haircare"
+    },
+    {
+        "id": "aussie-conditioner",
+        "title": "Aussie Miracle Moist Après-Shampooing",
+        "content": "Après-shampooing hydratant à l'huile de macadamia australienne. Pour cheveux secs et assoiffés. Démêle et assouplit instantanément. Prix: 1250 DA. Usage: après shampooing, répartir sur longueurs, rincer.",
+        "tags": [
+            "aussie",
+            "miracle moist",
+            "ميراكل مويست",
+            "macadamia",
+            "1250DA",
+            "hydratant",
+            "démêlant"
+        ],
+        "category": "haircare"
+    },
+    {
+        "id": "herbal-essences-mask",
+        "title": "Herbal Essences Masque Hydratant",
+        "content": "Masque nourrissant à l'aloe vera et huile de coco. Hydratation intense pour cheveux très secs. Formule sans sulfate, sans paraben. Prix: 1400 DA. Usage: 1-2 fois/semaine, laisser poser 5-10min.",
+        "tags": [
+            "herbal essences",
+            "aloe vera",
+            "الصبار",
+            "coco",
+            "1400DA",
+            "masque hydratant",
+            "sans sulfate"
+        ],
+        "category": "haircare"
+    },
+    {
+        "id": "maybelline-mascara",
+        "title": "Maybelline Great Lash Mascara",
+        "content": "Mascara culte pour cils volumineux et allongés. Brosse précise qui sépare chaque cil. Formule longue tenue, ne coule pas. Prix: 1800 DA. Usage: appliquer de la base vers pointes, plusieurs couches possibles.",
+        "tags": [
+            "maybelline",
+            "great lash",
+            "ماسكارا",
+            "cils",
+            "1800DA",
+            "volumineux",
+            "longue tenue"
+        ],
+        "category": "makeup"
+    },
+    {
+        "id": "revlon-lipstick",
+        "title": "Rouge à Lèvres Revlon Super Lustrous",
+        "content": "Rouge à lèvres crémeux et pigmenté. Large gamme de couleurs tendance. Tient 4-6h sans s'effriter. Enrichi en vitamine E. Prix: 2200 DA. Usage: appliquer directement ou au pinceau pour précision.",
+        "tags": [
+            "revlon",
+            "super lustrous",
+            "أحمر الشفاه",
+            "crémeux",
+            "2200DA",
+            "pigmenté",
+            "vitamine E"
+        ],
+        "category": "makeup"
+    },
+    {
+        "id": "loreal-foundation",
+        "title": "Fond de Teint L'Oréal True Match",
+        "content": "Fond de teint liquide s'adaptant au teint naturel. 15 nuances disponibles pour peaux algériennes. Couvrance modulable, fini naturel. Prix: 3200 DA. Usage: appliquer au pinceau ou éponge, estomper.",
+        "tags": [
+            "loreal",
+            "true match",
+            "كريم أساس",
+            "fond de teint",
+            "3200DA",
+            "15 nuances",
+            "naturel"
+        ],
+        "category": "makeup"
+    },
+    {
+        "id": "rimmel-eyeliner",
+        "title": "Rimmel Scandaleyes Eyeliner Waterproof",
+        "content": "Eye-liner feutre waterproof longue tenue. Pointe précise pour trait fin ou épais. Résiste eau, transpiration, larmes. Prix: 1600 DA. Usage: tirer paupière, tracer au ras des cils.",
+        "tags": [
+            "rimmel",
+            "scandaleyes",
+            "آي لاينر",
+            "waterproof",
+            "1600DA",
+            "longue tenue",
+            "précis"
+        ],
+        "category": "makeup"
+    },
+    {
+        "id": "essence-nail-polish",
+        "title": "Vernis à Ongles Essence",
+        "content": "Vernis à ongles trendy, couleurs mode de saison. Pinceau large pour application facile. Séchage rapide, belle brillance. Prix: 450 DA. Usage: 1 couche base, 2 couches couleur, 1 top coat.",
+        "tags": [
+            "essence",
+            "nail polish",
+            "طلاء أظافر",
+            "trendy",
+            "450DA",
+            "séchage rapide",
+            "brillant"
+        ],
+        "category": "makeup"
+    },
+    {
+        "id": "catrice-concealer",
+        "title": "Anticernes Catrice Liquid Camouflage",
+        "content": "Anticernes haute couvrance pour imperfections et cernes. Formule longue tenue, ne marque pas. 6 teintes adaptées peaux méditerranéennes. Prix: 1100 DA. Usage: tapoter sur zone, estomper.",
+        "tags": [
+            "catrice",
+            "concealer",
+            "خافي العيوب",
+            "haute couvrance",
+            "1100DA",
+            "cernes",
+            "imperfections"
+        ],
+        "category": "makeup"
+    },
+    {
+        "id": "nyx-lip-gloss",
+        "title": "Gloss NYX Professional Makeup",
+        "content": "Gloss brillant non collant avec applicateur doux. Hydrate tout en colorant les lèvres. Multiples finitions: nude, rose, rouge. Prix: 1500 DA. Usage: appliquer du centre vers extérieur des lèvres.",
+        "tags": [
+            "nyx",
+            "gloss",
+            "لمعان الشفاه",
+            "non collant",
+            "1500DA",
+            "hydratant",
+            "brillant"
+        ],
+        "category": "makeup"
+    },
+    {
+        "id": "sleek-palette",
+        "title": "Palette Fards Sleek MakeUP",
+        "content": "Palette 12 fards à paupières mats et nacrés. Couleurs complémentaires pour looks jour et soir. Pigmentation intense, facile à estomper. Prix: 2800 DA. Usage: appliquer au pinceau, mélanger couleurs.",
+        "tags": [
+            "sleek",
+            "palette",
+            "ظلال العيون",
+            "12 couleurs",
+            "2800DA",
+            "mat nacré",
+            "pigmenté"
+        ],
+        "category": "makeup"
+    },
+    {
+        "id": "bourjois-blush",
+        "title": "Blush Bourjois Little Round Pot",
+        "content": "Blush poudre effet bonne mine instantané. Texture soyeuse, longue tenue 6h. Couleurs naturelles adaptées teints méditerranéens. Prix: 1900 DA. Usage: prélever au pinceau, appliquer sur pommettes.",
+        "tags": [
+            "bourjois",
+            "blush",
+            "أحمر الخدود",
+            "bonne mine",
+            "1900DA",
+            "soyeux",
+            "6h"
+        ],
+        "category": "makeup"
+    },
+    {
+        "id": "max-factor-powder",
+        "title": "Poudre Compacte Max Factor",
+        "content": "Poudre compacte matifiante et fixatrice. Contrôle brillances toute la journée. Couvrance légère à moyenne, fini naturel. Prix: 2400 DA. Usage: appliquer au pinceau ou éponge après fond de teint.",
+        "tags": [
+            "max factor",
+            "poudre compacte",
+            "بودرة مضغوطة",
+            "matifiante",
+            "2400DA",
+            "contrôle brillance",
+            "naturel"
+        ],
+        "category": "makeup"
+    },
+    {
+        "id": "vitamin-c-serum",
+        "title": "Sérum Vitamine C 20%",
+        "content": "Sérum concentré en vitamine C pour éclat et anti-âge. Stimule production collagène, unifie teint. Pour tous types de peaux. Prix: 2800 DA. Usage: quelques gouttes le matin, suivre crème SPF.",
+        "tags": [
+            "vitamine C",
+            "sérum",
+            "سيروم فيتامين سي",
+            "éclat",
+            "2800DA",
+            "anti-âge",
+            "collagène"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "retinol-night-cream",
+        "title": "Crème de Nuit au Rétinol",
+        "content": "Crème anti-âge au rétinol pour peaux matures. Réduit rides, améliore texture peau. Usage progressif recommandé. Prix: 3800 DA. Usage: le soir uniquement, peau propre, éviter yeux et grossesse.",
+        "tags": [
+            "rétinol",
+            "anti-âge",
+            "ريتينول",
+            "nuit",
+            "3800DA",
+            "rides",
+            "texture"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "hyaluronic-acid-serum",
+        "title": "Sérum Acide Hyaluronique Pur",
+        "content": "Sérum hydratant à l'acide hyaluronique de différents poids moléculaires. Repulpe et hydrate en profondeur. Convient peaux déshydratées. Prix: 2500 DA. Usage: sur peau humide, matin et soir.",
+        "tags": [
+            "acide hyaluronique",
+            "sérum",
+            "حمض الهيالورونيك",
+            "hydratant",
+            "2500DA",
+            "repulpant",
+            "déshydratée"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "salicylic-acid-toner",
+        "title": "Lotion BHA Acide Salicylique 2%",
+        "content": "Lotion exfoliante à l'acide salicylique pour peau grasse et acnéique. Désincruste pores, réduit points noirs. Usage progressif. Prix: 2200 DA. Usage: le soir, sur peau propre, éviter yeux.",
+        "tags": [
+            "acide salicylique",
+            "BHA",
+            "حمض الساليسيليك",
+            "exfoliant",
+            "2200DA",
+            "peau grasse",
+            "acné"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "glycolic-acid-toner",
+        "title": "Lotion AHA Acide Glycolique 7%",
+        "content": "Lotion exfoliante douce à l'acide glycolique. Élimine cellules mortes, unifie teint, stimule renouvellement cellulaire. Prix: 2400 DA. Usage: le soir, 2-3 fois/semaine au début.",
+        "tags": [
+            "acide glycolique",
+            "AHA",
+            "حمض الغليكوليك",
+            "exfoliant",
+            "2400DA",
+            "renouvellement",
+            "unifiant"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "azelaic-acid-cream",
+        "title": "Crème Acide Azélaïque 10%",
+        "content": "Crème traitante à l'acide azélaïque pour rosacée et hyperpigmentation. Anti-inflammatoire et dépigmentant doux. Prix: 3200 DA. Usage: matin et soir, sur peau propre, protection solaire obligatoire.",
+        "tags": [
+            "acide azélaïque",
+            "rosacée",
+            "حمض الأزيليك",
+            "hyperpigmentation",
+            "3200DA",
+            "anti-inflammatoire",
+            "dépigmentant"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "ceramide-moisturizer",
+        "title": "Crème Hydratante aux Céramides",
+        "content": "Crème réparatrice enrichie en céramides et cholestérol. Restaure barrière cutanée, convient peaux atopiques et sensibles. Prix: 2900 DA. Usage: matin et soir, sur peau propre et sèche.",
+        "tags": [
+            "céramides",
+            "réparatrice",
+            "سيراميدات",
+            "barrière cutanée",
+            "2900DA",
+            "atopique",
+            "sensible"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "peptide-serum",
+        "title": "Sérum Peptides Anti-Âge",
+        "content": "Sérum concentré en peptides pour stimuler production de collagène. Lisse rides d'expression, raffermit peau mature. Prix: 3600 DA. Usage: matin et soir, avant crème hydratante.",
+        "tags": [
+            "peptides",
+            "anti-âge",
+            "بيبتيدات",
+            "collagène",
+            "3600DA",
+            "raffermissant",
+            "rides"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "snail-mucin-serum",
+        "title": "Sérum Mucine d'Escargot 96%",
+        "content": "Sérum réparateur et hydratant à la mucine d'escargot. Cicatrise, répare, hydrate intensément. Convient peaux abîmées et acnéiques. Prix: 2700 DA. Usage: matin et soir après nettoyage.",
+        "tags": [
+            "mucine escargot",
+            "réparateur",
+            "مخاط الحلزون",
+            "cicatrisant",
+            "2700DA",
+            "hydratant",
+            "acné"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "green-tea-toner",
+        "title": "Lotion Tonique Thé Vert",
+        "content": "Lotion apaisante et antioxydante au thé vert. Calme inflammation, protège du stress oxydatif. Convient peaux sensibles et réactives. Prix: 1800 DA. Usage: matin et soir après nettoyage.",
+        "tags": [
+            "thé vert",
+            "antioxydant",
+            "شاي أخضر",
+            "apaisant",
+            "1800DA",
+            "anti-inflammatoire",
+            "sensible"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "rose-water-toner",
+        "title": "Eau de Rose Pure",
+        "content": "Hydrolat de rose 100% naturel, apaisant et rafraîchissant. Tonifie, hydrate, parfume délicatement la peau. Convient tous types de peaux. Prix: 1200 DA. Usage: vaporiser ou appliquer avec coton.",
+        "tags": [
+            "eau de rose",
+            "hydrolat",
+            "ماء الورد",
+            "naturel",
+            "1200DA",
+            "apaisant",
+            "tous types"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "aloe-vera-gel",
+        "title": "Gel Aloe Vera 99% Pur",
+        "content": "Gel d'aloe vera pur, multi-usage apaisant et hydratant. Calme coups de soleil, irritations, piqûres. Absorption rapide, effet rafraîchissant. Prix: 900 DA. Usage: appliquer généreusement sur zone concernée.",
+        "tags": [
+            "aloe vera",
+            "gel",
+            "الصبار",
+            "multi-usage",
+            "900DA",
+            "apaisant",
+            "coups de soleil"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "jojoba-oil",
+        "title": "Huile de Jojoba Pure",
+        "content": "Huile végétale de jojoba 100% pure et naturelle. Régule sébum, hydrate sans graisser. Convient peaux mixtes à grasses et cheveux secs. Prix: 1600 DA. Usage: quelques gouttes suffisent.",
+        "tags": [
+            "jojoba",
+            "huile végétale",
+            "زيت الجوجوبا",
+            "régule sébum",
+            "1600DA",
+            "naturelle",
+            "mixte grasse"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "rosehip-oil",
+        "title": "Huile de Rose Musquée",
+        "content": "Huile précieuse riche en vitamines A et C. Régénère, cicatrise, atténue cicatrices et vergetures. Anti-âge naturel. Prix: 2200 DA. Usage: le soir, quelques gouttes sur peau propre.",
+        "tags": [
+            "rose musquée",
+            "régénérante",
+            "زيت ثمر الورد",
+            "cicatrices",
+            "2200DA",
+            "vitamines",
+            "anti-âge"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "argan-face-oil",
+        "title": "Huile d'Argan Visage Bio",
+        "content": "Huile d'argan bio spécialement formulée pour le visage. Première pression à froid, certifiée bio. Nourrit, protège, anti-âge. Prix: 2500 DA. Usage: matin ou soir, 2-3 gouttes massées délicatement.",
+        "tags": [
+            "argan bio",
+            "visage",
+            "زيت الأركان الحيوي",
+            "première pression",
+            "2500DA",
+            "certifié",
+            "nourrit"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "sweet-almond-oil",
+        "title": "Huile d'Amande Douce",
+        "content": "Huile végétale d'amande douce pour peaux délicates et bébés. Adoucit, apaise, démaquille en douceur. Riche en vitamines E et A. Prix: 1100 DA. Usage: massage doux ou démaquillage.",
+        "tags": [
+            "amande douce",
+            "bébé",
+            "زيت اللوز الحلو",
+            "délicate",
+            "1100DA",
+            "démaquillant",
+            "vitamines"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "coconut-oil-virgin",
+        "title": "Huile de Coco Vierge",
+        "content": "Huile de coco vierge extra, multi-usage beauté. Hydrate peau et cheveux, démaquille, blanchit dents. Antibactérienne naturelle. Prix: 1300 DA. Usage: solide à température ambiante, fond au contact.",
+        "tags": [
+            "coco vierge",
+            "multi-usage",
+            "زيت جوز الهند البكر",
+            "antibactérienne",
+            "1300DA",
+            "hydrate",
+            "naturelle"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "vitamin-e-oil",
+        "title": "Huile de Vitamine E Pure",
+        "content": "Huile de vitamine E concentrée, antioxydant puissant. Protège du vieillissement, cicatrise, nourrit ongles et cuticules. Prix: 1400 DA. Usage: quelques gouttes mélangées à crème ou pure.",
+        "tags": [
+            "vitamine E",
+            "antioxydant",
+            "فيتامين إي",
+            "vieillissement",
+            "1400DA",
+            "cicatrise",
+            "ongles"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "tea-tree-oil",
+        "title": "Huile Essentielle Tea Tree",
+        "content": "Huile essentielle d'arbre à thé, antibactérienne et antifongique. Traite acné, mycoses, pellicules. À diluer obligatoirement. Prix: 1500 DA. Usage: diluer dans huile végétale, test cutané requis.",
+        "tags": [
+            "tea tree",
+            "antibactérienne",
+            "زيت شجرة الشاي",
+            "acné",
+            "1500DA",
+            "antifongique",
+            "diluer"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "lavender-oil",
+        "title": "Huile Essentielle de Lavande",
+        "content": "Huile essentielle de lavande vraie, apaisante et cicatrisante. Calme irritations, favorise sommeil, parfume naturellement. Prix: 1200 DA. Usage: diluer ou diffuser, éviter pure sur peau.",
+        "tags": [
+            "lavande",
+            "apaisante",
+            "زيت اللافندر",
+            "cicatrisante",
+            "1200DA",
+            "sommeil",
+            "parfume"
+        ],
+        "category": "wellness"
+    },
+    {
+        "id": "eucalyptus-oil",
+        "title": "Huile Essentielle d'Eucalyptus",
+        "content": "Huile essentielle d'eucalyptus, décongestionnante et rafraîchissante. Soulage voies respiratoires, purifie air ambiant. Prix: 1000 DA. Usage: inhalation, diffusion, massage dilué.",
+        "tags": [
+            "eucalyptus",
+            "décongestionnant",
+            "زيت الأوكاليبتوس",
+            "respiratoire",
+            "1000DA",
+            "purifiant",
+            "inhalation"
+        ],
+        "category": "wellness"
+    },
+    {
+        "id": "peppermint-oil",
+        "title": "Huile Essentielle de Menthe Poivrée",
+        "content": "Huile essentielle de menthe poivrée, rafraîchissante et tonifiante. Soulage maux de tête, fatigue, nausées. Très concentrée. Prix: 1100 DA. Usage: dilution obligatoire, éviter yeux.",
+        "tags": [
+            "menthe poivrée",
+            "rafraîchissante",
+            "زيت النعناع",
+            "maux de tête",
+            "1100DA",
+            "tonifiante",
+            "concentrée"
+        ],
+        "category": "wellness"
+    },
+    {
+        "id": "omega-3-capsules",
+        "title": "Capsules Oméga-3 Huile de Poisson",
+        "content": "Complément alimentaire oméga-3 EPA/DHA. Soutient santé cardiovasculaire, cérébrale et inflammations. Capsules sans goût de poisson. Prix: 2800 DA. Usage: 2 capsules/jour aux repas.",
+        "tags": [
+            "oméga-3",
+            "complément",
+            "أوميغا-3",
+            "cardiovasculaire",
+            "2800DA",
+            "EPA DHA",
+            "capsules"
+        ],
+        "category": "wellness"
+    },
+    {
+        "id": "vitamin-d3-drops",
+        "title": "Gouttes Vitamine D3",
+        "content": "Vitamine D3 liquide pour toute la famille. Soutient immunité, os, humeur. Particulièrement important en automne/hiver. Prix: 1800 DA. Usage: 10 gouttes/jour pour adulte, 5 pour enfant.",
+        "tags": [
+            "vitamine D3",
+            "immunité",
+            "فيتامين د3",
+            "os",
+            "1800DA",
+            "humeur",
+            "famille"
+        ],
+        "category": "wellness"
+    },
+    {
+        "id": "magnesium-tablets",
+        "title": "Comprimés Magnésium Bisglycinate",
+        "content": "Magnésium hautement assimilable contre stress et fatigue. Améliore sommeil, réduit crampes musculaires. Forme chélatée douce. Prix: 2200 DA. Usage: 2 comprimés le soir.",
+        "tags": [
+            "magnésium",
+            "stress",
+            "مغنيسيوم",
+            "sommeil",
+            "2200DA",
+            "crampes",
+            "bisglycinate"
+        ],
+        "category": "wellness"
+    },
+    {
+        "id": "probiotics-capsules",
+        "title": "Probiotiques Multi-Souches",
+        "content": "Mélange de 10 souches probiotiques pour flore intestinale. Améliore digestion, immunité, bien-être général. 10 milliards UFC. Prix: 3200 DA. Usage: 1 capsule/jour à jeun.",
+        "tags": [
+            "probiotiques",
+            "flore intestinale",
+            "بروبيوتيك",
+            "digestion",
+            "3200DA",
+            "immunité",
+            "10 souches"
+        ],
+        "category": "wellness"
+    },
+    {
+        "id": "collagen-powder",
+        "title": "Poudre de Collagène Marin",
+        "content": "Collagène marin hydrolysé pour peau, cheveux, ongles et articulations. Haute biodisponibilité, goût neutre. Prix: 4200 DA. Usage: 1 cuillère/jour dans boisson froide ou chaude.",
+        "tags": [
+            "collagène marin",
+            "peau",
+            "كولاجين بحري",
+            "articulations",
+            "4200DA",
+            "hydrolysé",
+            "biodisponibilité"
+        ],
+        "category": "wellness"
+    },
+    {
+        "id": "biotin-gummies",
+        "title": "Gummies Biotine Cheveux et Ongles",
+        "content": "Gommes vitaminées à la biotine pour fortifier cheveux et ongles. Goût fruits rouges, sans sucre ajouté. Formule enrichie zinc et sélénium. Prix: 2400 DA. Usage: 2 gummies/jour.",
+        "tags": [
+            "biotine",
+            "cheveux ongles",
+            "بيوتين",
+            "gummies",
+            "2400DA",
+            "zinc sélénium",
+            "fruits rouges"
+        ],
+        "category": "wellness"
+    },
+    {
+        "id": "green-tea-extract",
+        "title": "Extrait de Thé Vert Standardisé",
+        "content": "Extrait concentré de thé vert riche en EGCG. Antioxydant puissant, soutient métabolisme et détoxification. Prix: 2600 DA. Usage: 1 gélule/jour avec repas, éviter le soir.",
+        "tags": [
+            "thé vert",
+            "EGCG",
+            "شاي أخضر",
+            "antioxydant",
+            "2600DA",
+            "métabolisme",
+            "détox"
+        ],
+        "category": "wellness"
+    },
+    {
+        "id": "turmeric-curcumin",
+        "title": "Curcuma + Pipérine Gélules",
+        "content": "Curcumine standardisée avec pipérine pour absorption optimale. Anti-inflammatoire naturel, soutient articulations et digestion. Prix: 2800 DA. Usage: 1-2 gélules aux repas.",
+        "tags": [
+            "curcuma",
+            "pipérine",
+            "كركم",
+            "anti-inflammatoire",
+            "2800DA",
+            "articulations",
+            "curcumine"
+        ],
+        "category": "wellness"
+    },
+    {
+        "id": "spirulina-tablets",
+        "title": "Spiruline Bio Comprimés",
+        "content": "Micro-algue spiruline bio, super-aliment riche en protéines, fer, vitamines B. Boost d'énergie naturel, détoxifiant. Prix: 3000 DA. Usage: 3-6 comprimés/jour avec eau.",
+        "tags": [
+            "spiruline bio",
+            "super-aliment",
+            "سبيرولينا",
+            "protéines",
+            "3000DA",
+            "énergie",
+            "détox"
+        ],
+        "category": "wellness"
+    },
+    {
+        "id": "ashwagandha-extract",
+        "title": "Extrait d'Ashwagandha",
+        "content": "Adaptogène ayurvédique pour gestion du stress et énergie. Soutient équilibre hormonal, améliore résistance au stress. Prix: 3200 DA. Usage: 1 gélule/jour, de préférence le matin.",
+        "tags": [
+            "ashwagandha",
+            "adaptogène",
+            "أشواغاندا",
+            "stress",
+            "3200DA",
+            "hormonal",
+            "ayurvédique"
+        ],
+        "category": "wellness"
+    },
+    {
+        "id": "zinc-bisglycinate",
+        "title": "Zinc Bisglycinate",
+        "content": "Zinc chélaté hautement assimilable pour immunité et cicatrisation. Soutient peau, cheveux, fertilité. Forme douce pour estomac. Prix: 1800 DA. Usage: 1 comprimé/jour aux repas.",
+        "tags": [
+            "zinc",
+            "immunité",
+            "زنك",
+            "cicatrisation",
+            "1800DA",
+            "bisglycinate",
+            "fertilité"
+        ],
+        "category": "wellness"
+    },
+    {
+        "id": "iron-bisglycinate",
+        "title": "Fer Bisglycinate",
+        "content": "Fer chélaté contre anémie et fatigue. Haute absorption, doux pour estomac, pas de constipation. Particulièrement pour femmes. Prix: 2000 DA. Usage: 1 capsule/jour à jeun avec vitamine C.",
+        "tags": [
+            "fer",
+            "anémie",
+            "حديد",
+            "fatigue",
+            "2000DA",
+            "femmes",
+            "bisglycinate"
+        ],
+        "category": "wellness"
+    },
+    {
+        "id": "selenium-tablets",
+        "title": "Sélénium Organique",
+        "content": "Sélénium organique antioxydant pour thyroïde et immunité. Protège cellules du stress oxydatif, soutient cheveux et ongles. Prix: 2200 DA. Usage: 1 comprimé/jour.",
+        "tags": [
+            "sélénium",
+            "thyroïde",
+            "سيلينيوم",
+            "antioxydant",
+            "2200DA",
+            "cheveux ongles",
+            "cellules"
+        ],
+        "category": "wellness"
+    },
+    {
+        "id": "b-complex-vitamins",
+        "title": "Complexe Vitamines B",
+        "content": "Ensemble des 8 vitamines B essentielles pour énergie et système nerveux. Combat fatigue, stress, améliore concentration. Prix: 2400 DA. Usage: 1 gélule/jour au petit-déjeuner.",
+        "tags": [
+            "vitamines B",
+            "énergie",
+            "فيتامينات ب",
+            "système nerveux",
+            "2400DA",
+            "fatigue",
+            "concentration"
+        ],
+        "category": "wellness"
+    },
+    {
+        "id": "evening-primrose-oil",
+        "title": "Huile d'Onagre Capsules",
+        "content": "Huile d'onagre riche en oméga-6 GLA pour équilibre hormonal féminin. Soulage syndrome prémenstruel, améliore peau. Prix: 2600 DA. Usage: 2 capsules/jour aux repas.",
+        "tags": [
+            "onagre",
+            "hormonal féminin",
+            "زيت زهرة الربيع",
+            "prémenstruel",
+            "2600DA",
+            "oméga-6",
+            "peau"
+        ],
+        "category": "wellness"
+    },
+    {
+        "id": "chamomile-tea",
+        "title": "Tisane Camomille Bio",
+        "content": "Fleurs de camomille séchées bio pour infusion relaxante. Apaise digestion, favorise sommeil, calme nervosité. Prix: 800 DA. Usage: 1 cuillère/tasse, infuser 5min, le soir de préférence.",
+        "tags": [
+            "camomille",
+            "tisane",
+            "بابونج",
+            "relaxante",
+            "800DA",
+            "sommeil",
+            "digestion"
+        ],
+        "category": "wellness"
+    },
+    {
+        "id": "green-clay-mask",
+        "title": "Argile Verte Montmorillonite",
+        "content": "Argile verte pure pour masques purifiants. Absorbe excès de sébum, resserre pores, détoxifie peau grasse. Prix: 600 DA. Usage: mélanger à eau, appliquer 10min, rincer.",
+        "tags": [
+            "argile verte",
+            "masque",
+            "طين أخضر",
+            "purifiante",
+            "600DA",
+            "sébum",
+            "pores"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "white-clay-mask",
+        "title": "Argile Blanche Kaolin",
+        "content": "Argile blanche douce pour peaux sensibles et sèches. Nettoie en douceur, adoucit, illumine teint terne. Prix: 700 DA. Usage: masque 1-2 fois/semaine, 10-15min, rincer à l'eau tiède.",
+        "tags": [
+            "argile blanche",
+            "kaolin",
+            "طين أبيض",
+            "sensible",
+            "700DA",
+            "adoucit",
+            "illumine"
+        ],
+        "category": "skincare"
+    },
+    {
+        "id": "pink-clay-mask",
+        "title": "Argile Rose",
+        "content": "Mélange argile blanche et rouge pour peaux mixtes délicates. Équilibre, apaise rougeurs, convient peaux réactives. Prix: 750 DA. Usage: masque hebdomadaire, éviter contour yeux.",
+        "tags": [
+            "argile rose",
+            "mixte délicate",
+            "طين وردي",
+            "équilibre",
+            "750DA",
+            "rougeurs",
+            "réactives"
+        ],
+        "category": "skincare"
+    }
 ]

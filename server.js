@@ -17,6 +17,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // API routes
 app.use('/api/knowledge', require('./routes/knowledge'));
 app.use('/api/chat', require('./routes/chat'));
+app.use('/api/conversations', require('./routes/conversations'));
 app.use('/action', require('./routes/actions'));
 
 // Serve personas config for frontend
