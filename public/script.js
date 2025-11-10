@@ -115,6 +115,23 @@ async function sendMessage() {
     
     appendMessage('assistant', data.reply || JSON.stringify(data));
     
+    // Show debug info if available
+    if (data.debug && data.debug.foundProducts > 0) {
+      console.log('[Debug] Products found:', data.debug.productNames);
+      console.log('[Debug] Has product mention:', data.debug.hasProductMention);
+      
+      // Show product info occasionally for transparency
+      if (Math.random() < 0.3) {
+        const productInfo = `🛍️ ${data.debug.foundProducts} produits trouvés: ${data.debug.productNames.slice(0, 2).join(', ')}`;
+        const memoryIndicator = document.getElementById('memoryStatus');
+        if (memoryIndicator) {
+          memoryIndicator.textContent = productInfo;
+          memoryIndicator.style.display = 'block';
+          setTimeout(() => memoryIndicator.style.display = 'none', 4000);
+        }
+      }
+    }
+    
     // Show memory status occasionally
     if (data.memoryStatus && Math.random() < 0.2) {
       const memoryIndicator = document.getElementById('memoryStatus');

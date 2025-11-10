@@ -15,8 +15,11 @@ const CONVERSATION_CLEANUP_THRESHOLD = 20; // Cleanup when exceeding this limit
 function readKB() {
   try {
     const raw = fs.readFileSync(KB_PATH, 'utf8');
-    return JSON.parse(raw || '[]');
+    const kb = JSON.parse(raw || '[]');
+    console.log(`[Knowledge Base] Loaded ${kb.length} products successfully`);
+    return kb;
   } catch (e) {
+    console.error(`[Knowledge Base] Error loading products: ${e.message}`);
     return [];
   }
 }
@@ -29,22 +32,78 @@ function readPersonas() {
   }
 }
 
-// Helper: naive relevance by keyword overlap
-function getRelevantEntries(message, top = 3) {
+// Enhanced product recommendation system with smart keyword matching
+function getRelevantEntries(message, top = 5) {  // Increased from 3 to 5 products
   const kb = readKB();
   const q = (message || '').toLowerCase();
   if (!q || kb.length === 0) return [];
+  
+  // Enhanced keyword mapping for better product matching
+  const skinConcernKeywords = {
+    'dry': ['جافة', 'جاف', 'sèche', 'sec', 'hydrat', 'ترطيب', 'hydra'],
+    'oily': ['دهنية', 'دهني', 'grasse', 'gras', 'sébum', 'دهون'],
+    'sensitive': ['حساسة', 'حساس', 'sensible', 'irritation', 'حساسية'],
+    'acne': ['حبوب', 'بثور', 'acné', 'boutons', 'pimple'],
+    'aging': ['تجاعيد', 'شيخوخة', 'rides', 'anti-âge', 'vieillissement'],
+    'dark-spots': ['تصبغات', 'بقع', 'taches', 'pigmentation'],
+    'hair': ['شعر', 'cheveux', 'capillaire'],
+    'makeup': ['مكياج', 'مكيلج', 'makeup', 'maquillage']
+  };
+  
   const scores = kb.map(doc => {
     const text = `${doc.title} ${doc.content} ${(doc.tags || []).join(' ')}`.toLowerCase();
     let score = 0;
     const words = q.split(/\s+/).filter(Boolean);
+    
+    // Base keyword matching
     words.forEach(w => {
       if (text.includes(w)) score += 1;
+      if (doc.title.toLowerCase().includes(w)) score += 3; // Title matches get higher score
+      if ((doc.tags || []).some(tag => tag.toLowerCase().includes(w))) score += 2;
     });
-    if (score === 0 && (doc.title || '').toLowerCase().includes(q)) score += 2;
+    
+    // Enhanced concern-based matching
+    Object.keys(skinConcernKeywords).forEach(concern => {
+      const keywords = skinConcernKeywords[concern];
+      const messageHasConcern = keywords.some(keyword => q.includes(keyword));
+      const productAddressesConcern = keywords.some(keyword => text.includes(keyword));
+      
+      if (messageHasConcern && productAddressesConcern) {
+        score += 5; // High boost for concern-product matching
+      }
+    });
+    
+    // Category bonus - prioritize skincare for skin concerns
+    if (q.includes('بشر') || q.includes('peau') || q.includes('skin')) {
+      if (doc.category === 'skincare') score += 2;
+    }
+    
     return { doc, score };
   });
-  return scores.filter(s => s.score > 0).sort((a, b) => b.score - a.score).slice(0, top).map(s => s.doc);
+  
+  // Always return some products even if no perfect matches
+  const results = scores.filter(s => s.score > 0).sort((a, b) => b.score - a.score);
+  
+  // If we have good matches, return them
+  if (results.length >= top) {
+    return results.slice(0, top).map(s => s.doc);
+  }
+  
+  // If not enough matches, add some popular products from same category
+  const matchedProducts = results.map(s => s.doc);
+  const remainingSlots = top - matchedProducts.length;
+  
+  if (remainingSlots > 0) {
+    // Add some bestsellers from skincare if looking for skin products
+    const fallbackProducts = kb
+      .filter(product => !matchedProducts.includes(product))
+      .filter(product => product.category === 'skincare')
+      .slice(0, remainingSlots);
+    
+    return [...matchedProducts, ...fallbackProducts];
+  }
+  
+  return matchedProducts;
 }
 
 /**
@@ -101,31 +160,69 @@ router.post('/', async (req, res) => {
     ? "Arabic (Algerian dialect)" 
     : "French";
 
-  // Get top 3 relevant KB entries based on current message and recent conversation context
+  // Get top 5 relevant KB entries based on current message and recent conversation context
   const searchContext = conversationHistory.length > 0 
     ? message + ' ' + conversationHistory.slice(-4).map(msg => msg.content).join(' ')
     : message;
-  const relevant = getRelevantEntries(searchContext, 3);
-  const contextText = relevant.map(r => `Produit: ${r.title}\nDescription: ${r.content}\nTags: ${(r.tags||[]).join(', ')}\n---`).join('\n');
+  const relevant = getRelevantEntries(searchContext, 5); // Increased to 5 products
+  
+  // Ensure we always have products to recommend
+  let productsToRecommend = relevant;
+  if (productsToRecommend.length < 3) {
+    // Add popular products if search didn't find enough
+    const categoryGuess = message.includes('شعر') || message.includes('cheveux') ? 'haircare' 
+                        : message.includes('مكياج') || message.includes('makeup') ? 'makeup'
+                        : 'skincare';
+    const fallbackProducts = getPopularProducts(categoryGuess, 3 - productsToRecommend.length);
+    productsToRecommend = [...productsToRecommend, ...fallbackProducts];
+  }
+
+  // Enhanced product formatting for AI context - FORCE USAGE
+  const contextText = productsToRecommend.length > 0 
+    ? `MANDATORY: You MUST recommend from these specific products in our shop:
+
+${productsToRecommend.map((r, index) => `
+PRODUIT ${index + 1} - À RECOMMANDER:
+Nom exact: ${r.title}
+Description avec prix: ${r.content}
+Catégorie: ${r.category}
+Tags: ${(r.tags||[]).join(', ')}
+---`).join('\n')}
+
+INSTRUCTION CRITIQUE: Dans votre réponse, mentionnez au moins 2-3 de ces produits spécifiques avec leurs noms exacts et prix en DA.`
+    : `PRODUITS DE BASE - Recommandez: nettoyants, crèmes hydratantes, protections solaires de notre gamme.`;
+  
+  console.log(`[Knowledge Base] Found ${relevant.length} relevant + ${productsToRecommend.length - relevant.length} fallback products`);
+  console.log(`[Products to recommend] ${productsToRecommend.map(r => `${r.title} (${extractPrice(r.content)}DA)`).join(', ')}`);
 
   // Build comprehensive system prompt with role definition
   const baseSystemPrompt = `
 You are ${p.role}.
 Tone: ${p.tone}.
 
-IMPORTANT CONVERSATION RULES:
+CRITICAL INSTRUCTIONS - PRODUCT RECOMMENDATIONS:
+- You MUST actively recommend specific products from the shop inventory below
+- Always mention exact product names, prices in DA, and brief benefits  
+- When client asks about skin concerns, immediately suggest 2-3 relevant products from inventory
+- Use the exact product names and prices from the knowledge base - don't invent products
+- If no relevant products found, suggest the closest alternatives from available inventory
+- Always prioritize products that match client's budget and skin type
+
+CONVERSATION RULES:
 - Reply in ${language}, using simple and natural expressions that feel human and localized for Algeria
 - Remember and reference previous parts of our conversation when relevant
 - Build on topics we've already discussed
 - If the client mentioned specific skin concerns, products, or preferences before, acknowledge them
-- Use the product knowledge base to provide accurate recommendations with DA pricing
 - Always end with a helpful question or offer to maintain conversation flow
 - Be consistent with your previous advice and recommendations
 
-Available Products in Our Shop:
+CURRENT SHOP INVENTORY - USE THESE PRODUCTS IN YOUR RECOMMENDATIONS:
 ${contextText}
 
-Your personality: You are a warm, trustworthy Algerian beauty consultant in a real beauty shop. Maintain a consistent, caring relationship with each client throughout the conversation.`;
+EXAMPLE RESPONSE FORMAT:
+"For [concern], I recommend [Product Name] at [Price] DA because [brief benefit]. Also consider [Product 2] at [Price] DA for [additional benefit]."
+
+Your personality: You are a warm, trustworthy Algerian beauty consultant in a real beauty shop. You know your inventory perfectly and always recommend specific products with accurate prices.`;
 
   // Build contextual prompt including conversation history
   const contextualPrompt = buildConversationContext(conversationHistory, baseSystemPrompt);
@@ -134,7 +231,26 @@ Your personality: You are a warm, trustworthy Algerian beauty consultant in a re
   addMessageToHistory(currentSessionId, 'user', message);
 
   // Get AI response with full context
-  const gResponse = await callGemini(contextualPrompt, message);
+  let gResponse = await callGemini(contextualPrompt, message);
+  
+  // Post-processing: Ensure AI response includes product recommendations
+  const hasProductMention = productsToRecommend.some(product => 
+    gResponse.includes(product.title) || 
+    gResponse.includes(extractPrice(product.content) + ' DA') ||
+    gResponse.includes(extractPrice(product.content) + 'DA')
+  );
+  
+  if (!hasProductMention && productsToRecommend.length > 0) {
+    // Force add product recommendations if AI didn't include them
+    const forcedRecommendations = `\n\nVoici mes recommandations spécifiques:\n${
+      productsToRecommend.slice(0, 2).map(p => 
+        `• ${p.title} - ${extractPrice(p.content)} DA: ${p.content.split('.')[0]}.`
+      ).join('\n')
+    }\n\nLequel vous intéresse le plus?`;
+    
+    gResponse += forcedRecommendations;
+    console.log('[FORCED PRODUCTS] Added product recommendations to response');
+  }
   
   // Add AI response to history
   addMessageToHistory(currentSessionId, 'model', gResponse);
@@ -182,12 +298,20 @@ Your personality: You are a warm, trustworthy Algerian beauty consultant in a re
   res.json({ 
     reply: gResponse, 
     persona: p, 
-    relevant, 
+    relevant: productsToRecommend, // Use the actual products being recommended
     action, 
     actionResult,
     sessionId: currentSessionId,
     conversationLength: conversationHistory.length + 2, // +2 for current exchange
-    memoryStatus: `${Math.floor(conversationHistory.length / 2)} exchanges remembered`
+    memoryStatus: `${Math.floor(conversationHistory.length / 2)} exchanges remembered`,
+    debug: {
+      searchQuery: searchContext,
+      foundProducts: productsToRecommend.length,
+      productNames: productsToRecommend.map(p => p.title),
+      hasProductMention: productsToRecommend.some(product => 
+        gResponse.includes(product.title) || gResponse.includes(extractPrice(product.content) + ' DA')
+      )
+    }
   });
 });
 
@@ -331,5 +455,69 @@ function cleanupOldConversations() {
     console.warn('Error during conversation cleanup:', e.message);
   }
 }
+
+/**
+ * Get popular/bestseller products as fallback recommendations
+ * @param {string} category - Product category to focus on
+ * @param {number} count - Number of products to return
+ * @returns {Array} Array of popular products
+ */
+function getPopularProducts(category = 'skincare', count = 3) {
+  const kb = readKB();
+  const popularProducts = kb
+    .filter(product => product.category === category)
+    .sort((a, b) => {
+      // Sort by price (assuming mid-range products are more popular)
+      const priceA = extractPrice(a.content) || 0;
+      const priceB = extractPrice(b.content) || 0;
+      return Math.abs(priceA - 2000) - Math.abs(priceB - 2000); // Prefer products around 2000 DA
+    })
+    .slice(0, count);
+  
+  return popularProducts;
+}
+
+/**
+ * Extract price from product content
+ * @param {string} content - Product description content
+ * @returns {number} Price in DA or 0 if not found
+ */
+function extractPrice(content) {
+  const priceMatch = content.match(/(\d+)\s*DA/i);
+  return priceMatch ? parseInt(priceMatch[1]) : 0;
+}
+
+// Test endpoint to verify knowledge base and search functionality
+router.get('/test-products', (req, res) => {
+  const { query } = req.query;
+  const kb = readKB();
+  
+  if (!query) {
+    return res.json({
+      totalProducts: kb.length,
+      categories: [...new Set(kb.map(p => p.category))],
+      sampleProducts: kb.slice(0, 5).map(p => ({
+        title: p.title,
+        price: extractPrice(p.content),
+        category: p.category
+      }))
+    });
+  }
+  
+  const relevant = getRelevantEntries(query, 10);
+  res.json({
+    query,
+    foundProducts: relevant.length,
+    products: relevant.map(p => ({
+      title: p.title,
+      price: extractPrice(p.content),
+      category: p.category,
+      relevantTags: p.tags.filter(tag => 
+        tag.toLowerCase().includes(query.toLowerCase()) ||
+        query.toLowerCase().includes(tag.toLowerCase())
+      )
+    }))
+  });
+});
 
 module.exports = router;
