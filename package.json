@@ -1,7 +1,7 @@
 {
-  "name": "sailor-gemini-assistant",
-  "version": "0.1.0",
-  "description": "Prototype assistant using Gemini (Generative Language API), personas, and a local knowledge base",
+  "name": "hind-beauty-consultant",
+  "version": "0.2.0",
+  "description": "AI Beauty & Health Consultant for the Algerian market - Expert in cosmetics, skincare, and wellness products with local pricing in DA",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

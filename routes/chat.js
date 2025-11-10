@@ -67,13 +67,29 @@ router.post('/', async (req, res) => {
   if (!message) return res.status(400).json({ error: 'message required' });
 
   const personas = readPersonas();
-  const p = personas[persona] || { role: 'a helpful assistant', tone: 'neutral' };
+  const p = personas['consultant']; // Always use consultant persona
+
+  // Detect user language based on Arabic characters
+  const language = /[\u0600-\u06FF]/.test(message) 
+    ? "Arabic (Algerian dialect)" 
+    : "French";
 
   // Get top 3 relevant KB entries
   const relevant = getRelevantEntries(message, 3);
-  const contextText = relevant.map(r => `Title: ${r.title}\nContent: ${r.content}\nTags: ${ (r.tags||[]).join(', ') }\n---`).join('\n');
+  const contextText = relevant.map(r => `Produit: ${r.title}\nDescription: ${r.content}\nTags: ${(r.tags||[]).join(', ')}\n---`).join('\n');
 
-  const systemPrompt = `You are ${p.role}. Tone: ${p.tone}. Use the following internal knowledge when relevant:\n${contextText}`;
+  const systemPrompt = `
+You are ${p.role}.
+Tone: ${p.tone}.
+Reply in ${language}, using simple and natural expressions that feel human and localized for Algeria.
+Use the following product knowledge base when needed to provide accurate recommendations, explain clearly, and gently encourage purchases when appropriate.
+Make sure all product prices are expressed in Algerian Dinar (DA).
+Always end your response with a helpful question or offer to keep the conversation flowing naturally.
+
+Available Products:
+${contextText}
+
+Remember: You are a warm, trustworthy Algerian beauty consultant. Speak naturally like you're in a real beauty shop in Algeria.`;
 
   const gResponse = await callGemini(systemPrompt, message);
 

@@ -1,1 +1,72 @@
-[]
+[
+  {
+    "id": "nivea-soft-cream",
+    "title": "Crème Hydratante Nivea Soft",
+    "content": "Crème légère et rafraîchissante, idéale pour peau sèche et sensible. Enrichie en jojoba et vitamine E. Absorption rapide, texture non grasse. Prix: 1500 DA. Usage: matin et soir sur peau propre. Résultats visibles dès 7 jours.",
+    "tags": ["hydration", "nivea", "ترطيب", "peau sèche", "1500DA", "crème", "visage", "corps"],
+    "category": "skincare"
+  },
+  {
+    "id": "cerave-foaming-cleanser",
+    "title": "Gel Nettoyant CeraVe Moussant",
+    "content": "Nettoyant doux aux céramides et acide hyaluronique. Convient à tous types de peaux, même sensibles. Élimine impuretés sans dessécher. Prix: 2800 DA. Usage: matin et soir, masser sur peau humide puis rincer. Recommandé par dermatologues.",
+    "tags": ["nettoyant", "cerave", "تنظيف", "céramides", "2800DA", "gel", "peau sensible", "dermatologique"],
+    "category": "skincare"
+  },
+  {
+    "id": "ordinary-niacinamide",
+    "title": "Sérum The Ordinary Niacinamide 10%",
+    "content": "Sérum concentré pour réduire pores dilatés et contrôler sébum. Contient 10% niacinamide + zinc. Idéal peau mixte à grasse. Prix: 2300 DA. Usage: quelques gouttes le soir après nettoyage. Éviter contour des yeux.",
+    "tags": ["sérum", "ordinary", "سيروم", "niacinamide", "2300DA", "pores", "peau grasse", "zinc"],
+    "category": "skincare"
+  },
+  {
+    "id": "garnier-micellar-water",
+    "title": "Eau Micellaire Garnier Tout-en-1",
+    "content": "Démaquille, nettoie et apaise en un seul geste. Convient yeux sensibles et lentilles de contact. Sans rinçage, sans parfum. Prix: 1200 DA. Usage: appliquer sur coton, passer délicatement sur visage et yeux.",
+    "tags": ["démaquillant", "garnier", "إزالة المكياج", "micellaire", "1200DA", "yeux sensibles", "sans rinçage"],
+    "category": "skincare"
+  },
+  {
+    "id": "loreal-revitalift-serum",
+    "title": "Sérum Anti-Âge L'Oréal Revitalift",
+    "content": "Sérum puissant à l'acide hyaluronique et vitamine B5. Réduit rides et ridules, raffermit la peau. Pour peaux matures 30+. Prix: 3500 DA. Usage: 3-4 gouttes matin et soir sous la crème. Résultats visibles en 4 semaines.",
+    "tags": ["anti-âge", "loreal", "مكافحة الشيخوخة", "acide hyaluronique", "3500DA", "rides", "raffermissant", "30+"],
+    "category": "skincare"
+  },
+  {
+    "id": "bioderma-sensibio-h2o",
+    "title": "Bioderma Sensibio H2O",
+    "content": "Eau micellaire spécialement formulée pour peaux sensibles. Démaquille en douceur sans irritation. Apaise et respecte l'équilibre cutané. Prix: 2200 DA. Usage: sur coton, nettoyer visage et yeux sans frotter.",
+    "tags": ["bioderma", "sensibio", "حساسة", "eau micellaire", "2200DA", "peau sensible", "démaquillant", "apaisant"],
+    "category": "skincare"
+  },
+  {
+    "id": "eucerin-sun-cream",
+    "title": "Crème Solaire Eucerin SPF 50+",
+    "content": "Protection très haute contre UV, adapté visage et corps. Résistante à l'eau et transpiration. Texture légère, non comédogène. Prix: 2900 DA. Usage: appliquer généreusement 20min avant exposition, renouveler toutes les 2h.",
+    "tags": ["protection solaire", "eucerin", "حماية الشمس", "SPF50", "2900DA", "UV", "résistant eau", "visage corps"],
+    "category": "skincare"
+  },
+  {
+    "id": "kerastase-elixir-oil",
+    "title": "Huile Capillaire Kérastase Elixir Ultime",
+    "content": "Huile précieuse aux 4 huiles rares pour cheveux ternes et abîmés. Nourrit, protège et apporte brillance. Tous types cheveux. Prix: 4200 DA. Usage: quelques gouttes sur cheveux humides ou secs, éviter racines.",
+    "tags": ["cheveux", "kerastase", "شعر", "huile capillaire", "4200DA", "brillance", "nutrition", "abîmés"],
+    "category": "haircare"
+  },
+  {
+    "id": "moroccan-argan-oil",
+    "title": "Huile d'Argan Pure du Maroc",
+    "content": "Huile d'argan 100% pure et naturelle, riche en vitamine E et omégas. Multi-usage: visage, corps, cheveux, ongles. Propriétés anti-âge et nourrissantes. Prix: 1800 DA. Usage: quelques gouttes suffisent, matin ou soir.",
+    "tags": ["argan", "huile naturelle", "زيت الأركان", "multi-usage", "1800DA", "vitamine E", "naturel", "maroc"],
+    "category": "skincare"
+  },
+  {
+    "id": "vichy-thermal-water",
+    "title": "Eau Thermale Vichy",
+    "content": "Eau thermale apaisante et fortifiante, riche en 15 minéraux. Calme irritations et rougeurs. Convient peaux sensibles et réactives. Prix: 1600 DA. Usage: vaporiser à 20cm, laisser agir 30sec puis sécher délicatement.",
+    "tags": ["eau thermale", "vichy", "مياه حرارية", "apaisante", "1600DA", "minéraux", "irritations", "sensible"],
+    "category": "skincare"
+  }
+]

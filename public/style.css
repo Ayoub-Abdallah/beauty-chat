@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background: #f5f7fb;
+    background: linear-gradient(135deg, #f5f7fb 0%, #e8f4f8 100%);
     color: #222;
 }
 
@@ -9,8 +9,23 @@ body {
     margin: 30px auto;
     background: #fff;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+    text-align: center;
+    color: #2c5aa0;
+    margin-bottom: 5px;
+    font-size: 28px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 20px;
+    font-size: 16px;
 }
 
 .chat {
@@ -48,6 +63,18 @@ body {
 .assistant .bubble {
     background: #f1f1f1;
     color: #111;
+}
+
+.typing-indicator .bubble {
+    background: #f8f9fa !important;
+    color: #666 !important;
+    font-style: italic;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
 }
 
 .controls {

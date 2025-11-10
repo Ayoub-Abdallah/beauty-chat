@@ -1,12 +1,9 @@
 async function loadPersonas() {
-  const res = await fetch('/api/personas');
-  const data = await res.json();
+  // No longer needed - using single consultant persona
   const sel = document.getElementById('personaSelect');
-  Object.keys(data).forEach(k => {
-    const opt = document.createElement('option');
-    opt.value = k; opt.textContent = `${k} - ${data[k].tone}`;
-    sel.appendChild(opt);
-  });
+  if (sel) {
+    sel.style.display = 'none'; // Hide persona selector
+  }
 }
 
 function appendMessage(role, text) {
@@ -23,24 +20,55 @@ function appendMessage(role, text) {
 
 async function sendMessage() {
   const input = document.getElementById('messageInput');
-  const persona = document.getElementById('personaSelect').value;
   const message = input.value.trim();
   if (!message) return;
+  
   appendMessage('user', message);
   input.value = '';
-
-  const res = await fetch('/api/chat', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ message, persona })
-  });
-
-  const data = await res.json();
-  appendMessage('assistant', data.reply || JSON.stringify(data));
   
-  if (data.action) {
-    appendMessage('assistant', 'Action suggested: ' + JSON.stringify(data.action));
-    if (data.actionResult) appendMessage('assistant', 'Action result: ' + JSON.stringify(data.actionResult));
+  // Show typing indicator
+  showTypingIndicator();
+  
+  try {
+    const res = await fetch('/api/chat', { 
+      method: 'POST', 
+      headers: {'Content-Type':'application/json'}, 
+      body: JSON.stringify({ message, persona: 'consultant' })
+    });
+    const data = await res.json();
+    
+    // Hide typing indicator
+    hideTypingIndicator();
+    
+    appendMessage('assistant', data.reply || JSON.stringify(data));
+    
+    if (data.action) {
+      appendMessage('assistant', 'Action suggérée: ' + JSON.stringify(data.action));
+      if (data.actionResult) appendMessage('assistant', 'Résultat: ' + JSON.stringify(data.actionResult));
+    }
+  } catch (error) {
+    hideTypingIndicator();
+    appendMessage('assistant', 'Désolé, une erreur s\'est produite. Pouvez-vous réessayer?');
+  }
+}
+
+function showTypingIndicator() {
+  const chat = document.getElementById('chat');
+  const indicator = document.createElement('div');
+  indicator.className = 'message assistant typing-indicator';
+  indicator.id = 'typing-indicator';
+  const bubble = document.createElement('div');
+  bubble.className = 'bubble';
+  bubble.textContent = 'Votre consultant écrit...';
+  indicator.appendChild(bubble);
+  chat.appendChild(indicator);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+function hideTypingIndicator() {
+  const indicator = document.getElementById('typing-indicator');
+  if (indicator) {
+    indicator.remove();
   }
 }
 
