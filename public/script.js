@@ -3,6 +3,8 @@
  * Maintains session ID in localStorage for persistent conversations
  */
 let currentSessionId = localStorage.getItem('chatSessionId') || null;
+let currentPurchaseState = 'browsing'; // Track purchase flow state
+let currentShoppingCart = null; // Track current shopping cart
 
 async function loadPersonas() {
   // No longer needed - using single consultant persona
@@ -132,6 +134,11 @@ async function sendMessage() {
       }
     }
     
+    // Update shopping cart display
+    if (data.shoppingCart || data.purchaseState) {
+      updateShoppingCart(data.shoppingCart, data.purchaseState);
+    }
+    
     // Show memory status occasionally
     if (data.memoryStatus && Math.random() < 0.2) {
       const memoryIndicator = document.getElementById('memoryStatus');
@@ -142,9 +149,27 @@ async function sendMessage() {
       }
     }
     
+    // Show purchase state in debug info
+    if (data.purchaseState && data.purchaseState !== 'browsing') {
+      console.log('[Debug] Purchase State:', data.purchaseState);
+      
+      // Show purchase progress indicator
+      const memoryIndicator = document.getElementById('memoryStatus');
+      if (memoryIndicator) {
+        memoryIndicator.textContent = `🛒 ${getStateLabel(data.purchaseState)}`;
+        memoryIndicator.style.display = 'block';
+        setTimeout(() => memoryIndicator.style.display = 'none', 5000);
+      }
+    }
+    
     if (data.action) {
       appendMessage('assistant', 'Action suggérée: ' + JSON.stringify(data.action));
       if (data.actionResult) appendMessage('assistant', 'Résultat: ' + JSON.stringify(data.actionResult));
+    }
+    
+    // Update shopping cart display if cart data is present
+    if (data.cart) {
+      updateShoppingCart(data.cart, data.purchaseState);
     }
   } catch (error) {
     hideTypingIndicator();
@@ -170,6 +195,53 @@ function hideTypingIndicator() {
   if (indicator) {
     indicator.remove();
   }
+}
+
+/**
+ * Update shopping cart display in UI
+ * @param {Object} cartData - Cart information from server
+ * @param {string} purchaseState - Current purchase state
+ */
+function updateShoppingCart(cartData, purchaseState) {
+  const cartContainer = document.getElementById('shoppingCart');
+  if (!cartContainer) return;
+  
+  currentPurchaseState = purchaseState || 'browsing';
+  currentShoppingCart = cartData;
+  
+  if (cartData && cartData.product) {
+    cartContainer.innerHTML = `
+      <div class="cart-active">
+        <h4>🛒 Panier en cours</h4>
+        <div class="cart-item">
+          <strong>${cartData.product}</strong>
+          ${cartData.quantity ? `(${cartData.quantity} unité${cartData.quantity > 1 ? 's' : ''})` : ''}
+        </div>
+        <div class="cart-state">État: ${getStateLabel(purchaseState)}</div>
+      </div>
+    `;
+    cartContainer.style.display = 'block';
+  } else {
+    cartContainer.style.display = 'none';
+  }
+}
+
+/**
+ * Get localized label for purchase state
+ * @param {string} state - Purchase flow state
+ * @returns {string} Localized state label
+ */
+function getStateLabel(state) {
+  const stateLabels = {
+    'browsing': '🛍️ Navigation',
+    'product_identified': '✅ Produit sélectionné', 
+    'quantity_requested': '📊 Quantité demandée',
+    'customer_details': '📋 Informations client',
+    'payment_method': '💳 Mode de paiement',
+    'final_confirmation': '✔️ Confirmation finale',
+    'order_complete': '🎉 Commande terminée'
+  };
+  return stateLabels[state] || state;
 }
 
 document.getElementById('sendBtn').addEventListener('click', sendMessage);

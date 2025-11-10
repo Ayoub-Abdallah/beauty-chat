@@ -1,7 +1,6 @@
-# 🌸 Hind Beauty Consultant - Setup Guide
+# Hind AI Chat - Multilingual Shopping Assistant
 
-## Overview
-AI Beauty & Health Consultant specialized for the Algerian market. Expert in cosmetics, skincare, and wellness products with local pricing in Algerian Dinar (DA).
+A sophisticated multilingual shopping assistant powered by Google Gemini, designed specifically for the Algerian beauty and wellness market. The assistant handles conversations in Arabic (Darja) and French, maintains conversation context, and guides users through complete purchase flows.
 
 ## Quick Setup
 
@@ -49,6 +48,38 @@ Open your browser and go to: `http://localhost:3000`
 - **Natural Consultation**: Feels like talking to a real beauty consultant in an Algerian pharmacy or beauty center
 - **Product Matching**: Suggests 2-3 products maximum with clear explanations
 - **Gentle Upselling**: Recommends complementary products when genuinely helpful
+
+## 🌟 Key Features
+
+### 1. **Complete Shopping Assistant**
+- **Full Purchase Flow**: From product discovery to order completion
+- **Real-time Inventory**: Live stock checking and reservation system
+- **Order Management**: Unique order IDs, customer details, payment tracking
+- **Multi-user Safe**: Handles concurrent purchases with proper stock management
+
+### 2. **Multilingual Intelligence**
+- **Arabic/Darja Support**: Natural Algerian dialect responses
+- **French Integration**: Localized French for broader accessibility
+- **Auto Language Detection**: Responds in user's preferred language
+- **Mixed Conversations**: Seamlessly handles language switching
+
+### 3. **Advanced Memory System**
+- **Persistent Sessions**: Conversations saved across browser sessions
+- **Context Awareness**: Remembers skin concerns, preferences, previous products
+- **Smart Cleanup**: Automatic optimization for performance
+- **Session Continuity**: Pick up conversations where you left off
+
+### 4. **Intent-Driven Interactions**
+- **Purchase Detection**: Automatically starts checkout flow for buying intent
+- **Price Inquiries**: Smart price responses with availability
+- **Confirmation Handling**: Recognizes confirmations in both languages
+- **Cancellation Support**: Graceful handling of order cancellations
+
+### 5. **Intelligent Product Matching**
+- **100+ Product Database**: Comprehensive Algerian beauty catalog
+- **Context-Based Recommendations**: Matches products to skin concerns
+- **Fallback Suggestions**: Always provides alternatives when needed
+- **Stock Integration**: Only recommends available products
 
 ## Sample Conversations
 

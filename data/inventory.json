@@ -1,0 +1,402 @@
+{
+  "nivea-soft-cream": {
+    "stock": 6,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "cerave-foaming-cleanser": {
+    "stock": 6,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "ordinary-niacinamide": {
+    "stock": 6,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "garnier-micellar-water": {
+    "stock": 7,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "loreal-revitalift-serum": {
+    "stock": 9,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "bioderma-sensibio-h2o": {
+    "stock": 24,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "eucerin-sun-cream": {
+    "stock": 18,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "kerastase-elixir-oil": {
+    "stock": 15,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "moroccan-argan-oil": {
+    "stock": 6,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "vichy-thermal-water": {
+    "stock": 24,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "la-roche-posay-toleriane": {
+    "stock": 5,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "avene-cleansing-foam": {
+    "stock": 16,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "neutrogena-hydra-boost": {
+    "stock": 21,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "olay-regenerist-serum": {
+    "stock": 17,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "vaseline-intensive-care": {
+    "stock": 12,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "palmers-cocoa-butter": {
+    "stock": 19,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "dove-beauty-bar": {
+    "stock": 16,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "johnson-baby-oil": {
+    "stock": 9,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "sebamed-cleansing-bar": {
+    "stock": 16,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "eucerin-aquaphor": {
+    "stock": 15,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "garnier-fructis-shampoo": {
+    "stock": 14,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "loreal-elvive-oil": {
+    "stock": 12,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "pantene-pro-v-mask": {
+    "stock": 9,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "schwarzkopf-gliss": {
+    "stock": 9,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "head-shoulders-shampoo": {
+    "stock": 23,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "tresemme-keratin": {
+    "stock": 16,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "sunsilk-coconut-shampoo": {
+    "stock": 14,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "aussie-conditioner": {
+    "stock": 17,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "herbal-essences-mask": {
+    "stock": 15,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "maybelline-mascara": {
+    "stock": 5,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "revlon-lipstick": {
+    "stock": 15,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "loreal-foundation": {
+    "stock": 5,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "rimmel-eyeliner": {
+    "stock": 7,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "essence-nail-polish": {
+    "stock": 11,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "catrice-concealer": {
+    "stock": 21,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "nyx-lip-gloss": {
+    "stock": 20,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "sleek-palette": {
+    "stock": 20,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "bourjois-blush": {
+    "stock": 9,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "max-factor-powder": {
+    "stock": 17,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "vitamin-c-serum": {
+    "stock": 16,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "retinol-night-cream": {
+    "stock": 9,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "hyaluronic-acid-serum": {
+    "stock": 14,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "salicylic-acid-toner": {
+    "stock": 18,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "glycolic-acid-toner": {
+    "stock": 7,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "azelaic-acid-cream": {
+    "stock": 22,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "ceramide-moisturizer": {
+    "stock": 20,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "peptide-serum": {
+    "stock": 17,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "snail-mucin-serum": {
+    "stock": 18,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "green-tea-toner": {
+    "stock": 10,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "rose-water-toner": {
+    "stock": 6,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "aloe-vera-gel": {
+    "stock": 15,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "jojoba-oil": {
+    "stock": 19,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "rosehip-oil": {
+    "stock": 7,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "argan-face-oil": {
+    "stock": 5,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "sweet-almond-oil": {
+    "stock": 15,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "coconut-oil-virgin": {
+    "stock": 10,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "vitamin-e-oil": {
+    "stock": 18,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "tea-tree-oil": {
+    "stock": 24,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "lavender-oil": {
+    "stock": 23,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "eucalyptus-oil": {
+    "stock": 9,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "peppermint-oil": {
+    "stock": 16,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "omega-3-capsules": {
+    "stock": 20,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "vitamin-d3-drops": {
+    "stock": 14,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "magnesium-tablets": {
+    "stock": 7,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "probiotics-capsules": {
+    "stock": 20,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "collagen-powder": {
+    "stock": 23,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "biotin-gummies": {
+    "stock": 19,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "green-tea-extract": {
+    "stock": 13,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "turmeric-curcumin": {
+    "stock": 6,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "spirulina-tablets": {
+    "stock": 14,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "ashwagandha-extract": {
+    "stock": 10,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "zinc-bisglycinate": {
+    "stock": 24,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "iron-bisglycinate": {
+    "stock": 18,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "selenium-tablets": {
+    "stock": 20,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "b-complex-vitamins": {
+    "stock": 9,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "evening-primrose-oil": {
+    "stock": 9,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "chamomile-tea": {
+    "stock": 17,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "green-clay-mask": {
+    "stock": 6,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "white-clay-mask": {
+    "stock": 19,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  },
+  "pink-clay-mask": {
+    "stock": 14,
+    "reserved": 0,
+    "lastUpdated": "2025-11-10T12:53:54.468Z"
+  }
+}

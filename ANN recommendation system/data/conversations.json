@@ -1,0 +1,16 @@
+[
+  {
+    "session_id": 101,
+    "messages": [
+      "Hi there, I'm looking for some new running shoes.",
+      "I like lightweight and breathable materials."
+    ]
+  },
+  {
+    "session_id": 102,
+    "messages": [
+      "I need a yoga mat for my morning routine.",
+      "Prefer something extra thick."
+    ]
+  }
+]

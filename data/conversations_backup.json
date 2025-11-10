@@ -1,0 +1,116 @@
+{
+  "test-greeting-2": [
+    {
+      "role": "user",
+      "content": "salam",
+      "timestamp": "2025-11-10T13:05:05.361Z"
+    },
+    {
+      "role": "model",
+      "content": "Désolé, comment puis-je vous aider avec vos besoins beauté aujourd'hui ? 😊",
+      "timestamp": "2025-11-10T13:05:06.789Z"
+    }
+  ],
+  "test-greeting-3": [
+    {
+      "role": "user",
+      "content": "salam",
+      "timestamp": "2025-11-10T13:06:08.682Z"
+    },
+    {
+      "role": "model",
+      "content": "Bonjour et bienvenue dans notre boutique beauté & santé ! 🌸 Comment puis-je vous aider aujourd'hui ?",
+      "timestamp": "2025-11-10T13:06:08.837Z"
+    }
+  ],
+  "test-greeting-4": [
+    {
+      "role": "user",
+      "content": "salam",
+      "timestamp": "2025-11-10T13:07:42.347Z"
+    },
+    {
+      "role": "model",
+      "content": "Bonjour et bienvenue dans notre boutique beauté & santé ! 🌸 Comment puis-je vous aider aujourd'hui ?",
+      "timestamp": "2025-11-10T13:07:43.419Z"
+    }
+  ],
+  "test-greeting-5": [
+    {
+      "role": "user",
+      "content": "salam",
+      "timestamp": "2025-11-10T13:08:57.598Z"
+    },
+    {
+      "role": "model",
+      "content": "Bonjour et bienvenue dans notre boutique beauté & santé ! 🌸 Comment puis-je vous aider aujourd'hui ?",
+      "timestamp": "2025-11-10T13:08:58.650Z"
+    }
+  ],
+  "test-final-1": [
+    {
+      "role": "user",
+      "content": "salam",
+      "timestamp": "2025-11-10T13:10:11.197Z"
+    },
+    {
+      "role": "model",
+      "content": "Bonjour et bienvenue dans notre boutique beauté & santé ! 🌸\n\nJe suis là pour vous conseiller les meilleurs produits. Que recherchez-vous aujourd'hui ?",
+      "timestamp": "2025-11-10T13:10:12.090Z"
+    }
+  ],
+  "debug-test-1": [
+    {
+      "role": "user",
+      "content": "salam",
+      "timestamp": "2025-11-10T13:11:04.443Z"
+    },
+    {
+      "role": "model",
+      "content": "Bonjour et bienvenue dans notre boutique beauté & santé ! 🌸\n\nJe suis là pour vous conseiller les meilleurs produits. Que recherchez-vous aujourd'hui ?",
+      "timestamp": "2025-11-10T13:11:05.353Z"
+    }
+  ],
+  "session_1762764016388_v951inbwc": [
+    {
+      "role": "user",
+      "content": "salam",
+      "timestamp": "2025-11-10T13:12:10.454Z"
+    },
+    {
+      "role": "model",
+      "content": "Bonjour et bienvenue dans notre boutique beauté & santé ! 🌸\n\nJe suis là pour vous conseiller les meilleurs produits. Que recherchez-vous aujourd'hui ?",
+      "timestamp": "2025-11-10T13:12:10.986Z"
+    },
+    {
+      "role": "user",
+      "content": "عندي مشكلة في البشرة تاعي مزيتة",
+      "timestamp": "2025-11-10T13:14:59.339Z"
+    },
+    {
+      "role": "model",
+      "content": "Bonjour ! Je suis votre experte beauté 💄 Comment puis-je vous aider aujourd'hui ?\n\nVous pouvez me parler de :\n• Votre type de peau\n• Préoccupations spécifiques\n• Produits recherchés\n\nDe nos produits disponibles:\n• Gel Nettoyant CeraVe Moussant - 2800 DA\n• Pain Dermatologique Sebamed pH 5.5 - 1200 DA",
+      "timestamp": "2025-11-10T13:15:00.082Z"
+    },
+    {
+      "role": "user",
+      "content": "شحال السعر",
+      "timestamp": "2025-11-10T13:15:21.943Z"
+    },
+    {
+      "role": "model",
+      "content": "Quel produit vous intéresse ? Je peux vous aider à le trouver.",
+      "timestamp": "2025-11-10T13:15:21.944Z"
+    },
+    {
+      "role": "user",
+      "content": "تاع المنتج لي حكيتلي عليه",
+      "timestamp": "2025-11-10T13:15:54.757Z"
+    },
+    {
+      "role": "model",
+      "content": "Bonjour ! Je suis votre experte beauté 💄 Comment puis-je vous aider aujourd'hui ?\n\nVous pouvez me parler de :\n• Votre type de peau\n• Préoccupations spécifiques\n• Produits recherchés\n\nDe nos produits disponibles:\n• Pain Dermatologique Sebamed pH 5.5 - 1200 DA\n• Gel Nettoyant CeraVe Moussant - 2800 DA",
+      "timestamp": "2025-11-10T13:15:55.090Z"
+    }
+  ]
+}

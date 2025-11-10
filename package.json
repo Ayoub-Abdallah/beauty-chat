@@ -1,7 +1,7 @@
 {
   "name": "hind-beauty-consultant",
-  "version": "0.2.0",
-  "description": "AI Beauty & Health Consultant for the Algerian market - Expert in cosmetics, skincare, and wellness products with local pricing in DA",
+  "version": "0.3.0",
+  "description": "AI Beauty & Health Consultant with Enhanced Context Memory - Expert in cosmetics, skincare, and wellness products with semantic conversation memory and ANN-based recommendations",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

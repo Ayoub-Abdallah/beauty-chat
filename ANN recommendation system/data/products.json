@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "title": "Running Shoes Pro 2",
+    "description": "Lightweight breathable running shoes ideal for daily training.",
+    "category": "Sportswear",
+    "popularity": 0.8,
+    "stock": 1,
+    "recency": 0.6,
+    "personal": 0.0,
+    "seller_boost": 0.3
+  },
+  {
+    "id": 2,
+    "title": "Trail Runner XT",
+    "description": "Durable shoes for trail running and hiking.",
+    "category": "Sportswear",
+    "popularity": 0.7,
+    "stock": 1,
+    "recency": 0.7,
+    "personal": 0.0,
+    "seller_boost": 0.1
+  },
+  {
+    "id": 3,
+    "title": "Yoga Mat Deluxe",
+    "description": "Extra thick mat for comfort during yoga sessions.",
+    "category": "Fitness",
+    "popularity": 0.6,
+    "stock": 1,
+    "recency": 0.8,
+    "personal": 0.0,
+    "seller_boost": 0.0
+  },
+  {
+    "id": 4,
+    "title": "Wireless Earbuds Sport",
+    "description": "Sweat-resistant earbuds with long battery life.",
+    "category": "Electronics",
+    "popularity": 0.9,
+    "stock": 1,
+    "recency": 0.9,
+    "personal": 0.0,
+    "seller_boost": 0.2
+  },
+  {
+    "id": 5,
+    "title": "Fitness Tracker Pro",
+    "description": "Track your steps, heart rate, and sleep quality.",
+    "category": "Electronics",
+    "popularity": 0.85,
+    "stock": 1,
+    "recency": 0.7,
+    "personal": 0.0,
+    "seller_boost": 0.15
+  },
+  {
+    "id": 6,
+    "title": "Burger sandwish",
+    "description": "Big burtger with extra cheese and onions.",
+    "category": "food",
+    "popularity": 0.6,
+    "stock": 1,
+    "recency": 0.7,
+    "personal": 0.0,
+    "seller_boost": 0.15
+  },
+   {
+    "id": 7,
+    "title": "Sony A7 III camera",
+    "description": "profetional Full frame camera 24Mpx contains image stabilizations with 5 axis.",
+    "category": "Electronics",
+    "popularity": 0.6,
+    "stock": 1,
+    "recency": 0.7,
+    "personal": 0.0,
+    "seller_boost": 0.15
+  }
+
+]
