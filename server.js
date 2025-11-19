@@ -18,6 +18,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api/knowledge', require('./routes/knowledge'));
 app.use('/api/chat', require('./routes/chat'));
 app.use('/api/conversations', require('./routes/conversations'));
+app.use('/api/leads', require('./routes/leads')); // NEW: Lead management
 app.use('/action', require('./routes/actions'));
 
 // Serve personas config for frontend
