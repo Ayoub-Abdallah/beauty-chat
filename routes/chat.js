@@ -4,6 +4,14 @@ const fs = require('fs');
 const path = require('path');
 const { v4: uuidv4 } = require('uuid');
 
+// Import intelligent system utilities
+const { detectIntent } = require('../utils/intentDetection');
+const { detectLanguage, getLanguageName } = require('../utils/languageDetection');
+const { summarizeForRecommendation } = require('../utils/conversationSummarizer');
+const { buildSystemPrompt, buildConversationContext } = require('../utils/promptBuilder');
+const { getRecommendations, searchProduct, checkStock } = require('../utils/recommendationClient');
+const { saveLead } = require('../utils/saveLead');
+
 const personasPath = path.join(__dirname, '..', 'config', 'personas.json');
 const KB_PATH = path.join(__dirname, '..', 'data', 'knowledge.json');
 const CONVERSATIONS_PATH = path.join(__dirname, '..', 'data', 'conversations.json');
@@ -152,10 +160,41 @@ router.post('/', async (req, res) => {
   // Get conversation history for this session
   const conversationHistory = getConversationHistory(currentSessionId);
   
-  // Detect user language based on Arabic characters
-  const language = /[\u0600-\u06FF]/.test(message) 
-    ? "Arabic (Algerian dialect)" 
-    : "French";
+  // STEP 1: Detect language
+  const languageCode = detectLanguage(message);
+  const language = getLanguageName(languageCode);
+  console.log(`🌐 Language detected: ${language} (${languageCode})`);
+  
+  // STEP 2: Detect intent
+  const intent = detectIntent(message, conversationHistory);
+  console.log(`🎯 Intent detected: ${intent}`);
+  
+  // STEP 3: Call recommendation API for relevant intents
+  let products = [];
+  const shouldCallAPI = ['recommendation', 'implicit_recommendation', 'product_information', 'stock_check'].includes(intent);
+  
+  if (shouldCallAPI) {
+    try {
+      console.log(`📞 Calling recommendation API for intent: ${intent}`);
+      
+      // Prepare conversation summary for better recommendations
+      const summaryText = conversationHistory.length > 0 
+        ? conversationHistory.slice(-4).map(m => m.content).join(' ') + ' ' + message
+        : message;
+      console.log(`📝 Search query: ${summaryText.substring(0, 100)}...`);
+      
+      // Call recommendation API
+      const apiResponse = await getRecommendations(summaryText, message, languageCode);
+      products = apiResponse.recommendations || [];
+      
+      console.log(`✅ Got ${products.length} product recommendations from API`);
+    } catch (error) {
+      console.warn(`⚠️ Recommendation API failed: ${error.message}`);
+      // Continue without recommendations - Gemini will use knowledge base
+    }
+  } else {
+    console.log(`ℹ️  Skipping API call for intent: ${intent}`);
+  }
 
   // Get top 3 relevant KB entries based on current message and recent conversation context
   const searchContext = conversationHistory.length > 0 
@@ -163,6 +202,14 @@ router.post('/', async (req, res) => {
     : message;
   const relevant = getRelevantEntries(searchContext, 3);
   const contextText = relevant.map(r => `Produit: ${r.title}\nDescription: ${r.content}\nTags: ${(r.tags||[]).join(', ')}\n---`).join('\n');
+
+  // Add API product recommendations to context
+  let apiProductsText = '';
+  if (products.length > 0) {
+    apiProductsText = '\n\nRECOMMENDED PRODUCTS FROM CATALOG:\n' + products.map((p, idx) => 
+      `${idx + 1}. ${p.name || p.title}\n   Price: ${p.price} DA\n   ${p.description}\n   ${p.inStock ? '✅ In Stock' : '❌ Out of Stock'}`
+    ).join('\n\n');
+  }
 
   // Build comprehensive system prompt with role definition
   const baseSystemPrompt = `
@@ -175,11 +222,13 @@ IMPORTANT CONVERSATION RULES:
 - Build on topics we've already discussed
 - If the client mentioned specific skin concerns, products, or preferences before, acknowledge them
 - Use the product knowledge base to provide accurate recommendations with DA pricing
+${products.length > 0 ? '- PRIORITIZE recommending the products listed in "RECOMMENDED PRODUCTS FROM CATALOG" section below - these are specifically selected for this customer' : ''}
 - Always end with a helpful question or offer to maintain conversation flow
 - Be consistent with your previous advice and recommendations
+- Be persuasive but natural - highlight benefits, create urgency, and encourage purchase
 
 Available Products in Our Shop:
-${contextText}
+${contextText}${apiProductsText}
 
 Your personality: You are a warm, trustworthy Algerian beauty consultant in a real beauty shop. Maintain a consistent, caring relationship with each client throughout the conversation.`;
 
@@ -263,8 +312,12 @@ Your personality: You are a warm, trustworthy Algerian beauty consultant in a re
     action, 
     actionResult,
     sessionId: currentSessionId,
+    language: language,
+    intent: intent,
+    products: products.length,
     conversationLength: conversationHistory.length + 2, // +2 for current exchange
-    memoryStatus: `${Math.floor(conversationHistory.length / 2)} exchanges remembered`
+    memoryStatus: `${Math.floor(conversationHistory.length / 2)} exchanges remembered`,
+    apiCalled: shouldCallAPI && products.length > 0
   });
 });
 
@@ -358,24 +411,7 @@ function addMessageToHistory(sessionId, role, content) {
  * @param {string} systemPrompt - System instruction for the AI
  * @returns {string} Formatted conversation context
  */
-function buildConversationContext(history, systemPrompt) {
-  let context = systemPrompt + '\n\n';
-  
-  if (history.length === 0) {
-    // First message - include welcoming instruction
-    context += 'This is the start of a new conversation. Begin with a warm, friendly greeting in the appropriate language.\n\n';
-  } else {
-    // Include conversation history
-    context += 'Previous conversation context:\n';
-    history.forEach(msg => {
-      const speaker = msg.role === 'user' ? 'Client' : 'Consultant';
-      context += `${speaker}: ${msg.content}\n`;
-    });
-    context += '\nContinue the conversation naturally, remembering the context above.\n\n';
-  }
-  
-  return context;
-}
+// buildConversationContext function is imported from utils/promptBuilder.js
 
 /**
  * Clean up old conversations to prevent unlimited growth

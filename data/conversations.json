@@ -2,59 +2,93 @@
   "session_1762852153654_68wis4qvr": [
     {
       "role": "user",
-      "content": "ahla",
-      "timestamp": "2025-11-19T21:34:36.072Z"
+      "content": "salam",
+      "timestamp": "2025-11-19T22:51:14.830Z"
     },
     {
       "role": "model",
-      "content": "Ahla bik! Bienvenue chez nous ! Comment ça va aujourd'hui ?\n\nJe suis là pour vous aider avec tout ce qui concerne votre peau, vos cheveux ou votre bien-être. Dites-moi, qu'est-ce qui vous amène aujourd'hui ? Est-ce que vous cherchez quelque chose en particulier ou vous avez des questions ?",
-      "timestamp": "2025-11-19T21:34:38.084Z"
+      "content": "Salam alikoum! Bienvenue chez nous ! Je suis votre conseiller beauté et bien-être aujourd'hui. Comment puis-je vous aider ? N'hésitez surtout pas à me dire ce qui vous amène, je suis là pour vous écouter et vous accompagner au mieux.",
+      "timestamp": "2025-11-19T22:51:17.096Z"
     },
     {
       "role": "user",
-      "content": "عندي بشرة جافة، واش تنصحني؟",
-      "timestamp": "2025-11-19T21:34:41.716Z"
+      "content": "ma peau est seche",
+      "timestamp": "2025-11-19T22:51:34.342Z"
     },
     {
       "role": "model",
-      "content": "أهلا بيك مرة أخرى يا عمري!\nآه، البشرة الجافة لازمها عناية خاصة بزاف باش تبقى رطبة ومنتعشة، وتجنبي هذاك الإحساس تاع الجفاف والشد اللي يجي معاها. بزاف ناس يعانيو منها، بصح مع العناية الصحيحة ترجع تشعل!\n\nعادةً، البشرة الجافة تحتاج ترطيب عميق وحماية للمحاجز الطبيعية تاعها باش ما تفقدش الماء.\nمن بين المنتجات اللي عندنا هنايا اليوم، نقدر ننصحك بـ 'Eau Micellaire Garnier Tout-en-1'. ماشي هو مرطب يعالج الجفاف مباشرة، بصح هو مهم جداً كخطوة أولى في روتينك. ينظف الوجه بلطف وينحي الماكياج بلا ما يسبب جفاف إضافي للبشرة، وهذي حاجة ضرورية جداً للبشرة الجافة باش ما تزيديش تهيجيها بغسولات قاسية. السومة تاعو راهي 1200 DA.\n\nبصح باش نفهمك أحسن ونعطيك نصيحة مضبوطة، تقدري تقوليلي واش راكي تستعملي درك في روتينك؟ ولا واش راكي تحوسي عليه بالضبط، مرطب، ولا غسول، ولا سيروم باش يعالج الجفاف ويغذي البشرة؟ هكذا نقدر نساعدك بالشي لي يناسبك بالضبط.",
-      "timestamp": "2025-11-19T21:34:50.478Z"
+      "content": "Ah, d'accord ! La peau sèche, c'est une préoccupation très fréquente, surtout avec nos changements de temps. Je comprends tout à fait.\n\nPour bien vous orienter, est-ce que vous pourriez me dire un petit peu plus ? Par exemple, est-ce que c'est une sécheresse que vous avez depuis longtemps, ou c'est quelque chose de plus récent ? Et comment vous la ressentez ? Est-ce qu'elle tire, elle démange, ou elle pèle un peu par endroits ?\n\nN'hésitez pas à me donner le plus de détails possible, comme ça je pourrai vous aider à trouver la meilleure solution pour que votre peau retrouve tout son confort et son éclat !",
+      "timestamp": "2025-11-19T22:51:38.817Z"
+    },
+    {
+      "role": "user",
+      "content": "tu me conseil qoui",
+      "timestamp": "2025-11-19T22:51:52.845Z"
+    },
+    {
+      "role": "model",
+      "content": "Ah, super question ! D'accord, je comprends tout à fait que tu veuilles savoir par où commencer. Puisque tu m'as dit que ta peau est sèche, la première étape, et la plus importante, c'est le nettoyage. Il faut absolument un produit qui nettoie en douceur, sans la décaper ni l'assécher encore plus.\n\nPour ça, je te conseillerais un excellent produit qu'on a ici : le **La Roche-Posay Toleriane Caring Wash**. C'est un gel nettoyant ultra-doux, spécialement formulé pour les peaux sensibles et intolérantes, donc parfait pour une peau sèche comme la tienne.\n\nCe qui est génial avec ce produit, c'est qu'il est sans savon, sans paraben et sans alcool. Ça veut dire qu'il respecte vraiment ta peau, il ne la tire pas et ne la laisse pas inconfortable après le lavage. En plus, il contient de l'eau thermale qui apaise. C'est comme une petite caresse pour ton visage !\n\nIl coûte **3200 DA**. Tu peux l'utiliser matin et soir : tu masses délicatement sur ton visage, puis tu rinces à l'eau tiède.\n\nQu'est-ce que tu en penses pour commencer ? Et dis-moi, est-ce que tu te maquilles parfois ? Ça m'aiderait à te donner une recommandation complète pour ta routine !",
+      "timestamp": "2025-11-19T22:51:59.288Z"
     }
   ],
-  "19b6bdfc-8d5d-4b69-bcfa-0efc27b49e6b": [
+  "38ed0a3f-bb69-4783-b80b-4a610c3ee099": [
     {
       "role": "user",
-      "content": "السلام عليكم",
-      "timestamp": "2025-11-19T22:38:13.203Z"
+      "content": "نحتاج كريم للوجه",
+      "timestamp": "2025-11-19T22:58:21.262Z"
     },
     {
       "role": "model",
-      "content": "وعليكم السلام ورحمة الله! يا أهلاً وسهلاً بيكِ مدام/يا لالة! تفضلي، الدار دارك. أنا هنايا باش نساعدك في أي حاجة تخص الجمال، البشرة، ولا حتى الصحة العامة. قوليلي واش راكي تحوسي اليوم بالظبط؟ راني هنا لخدمتك!",
-      "timestamp": "2025-11-19T22:38:20.565Z"
+      "content": "أهلاً بيك مدام! مرحبا بك عندنا.\n\nبصحتك، راكي تحوسي على كريم للوجه. كاين بزاف أنواع وكل واحد واش يواليه، على حساب بشرتك واش تحتاج.\n\nيا ترى نوع بشرتك ناشفة، دهنية، مختلطة، ولا حساسة؟ وراكي تحوسي على كريم يرطب، يبيض، يعالج حب الشباب، ولا حاجة لمكافحة التجاعيد مثلاً؟ باش نقدر نساعدك خير ونلقاولك واش يخرج عليك نيشان.",
+      "timestamp": "2025-11-19T22:58:24.078Z"
     }
   ],
-  "session_1763591866030_jjpass8id": [
+  "69c2cf54-1633-46d3-9d9f-66b32f731536": [
     {
       "role": "user",
-      "content": "ahla",
-      "timestamp": "2025-11-19T22:39:10.658Z"
+      "content": "شنو أحسن كريم للبشرة الجافة؟",
+      "timestamp": "2025-11-19T23:08:45.743Z"
     },
     {
       "role": "model",
-      "content": "Ahla bik ! Bonjour ! Ça me fait vraiment plaisir de vous accueillir dans notre boutique aujourd'hui. Dites-moi, comment je peux vous être utile ? Est-ce que vous cherchez quelque chose en particulier, ou peut-être des conseils pour votre peau ou vos cheveux ?",
-      "timestamp": "2025-11-19T22:39:18.992Z"
+      "content": "أهلاً وسهلاً بيك يا لالة! سؤالك مهم بزاف على أحسن كريم للبشرة الجافة، وبصحتك راكي تهتمي ببشرتك.\n\nكاين بزاف كريمات هايلين ومناسبين للبشرة الجافة، لكن باش نقدر نختارلك الأنسب ليك، لازم نعرف شوية تفاصيل عليك. كل بشرة عندها احتياجاتها الخاصة.\n\nممكن تقوليلي:\n1.  **نوع الجفاف:** بشرتك جافة بزاف لدرجة تحسي فيها بالشد أو التقشر، ولا جفاف خفيف برك؟\n2.  **الحساسية:** بشرتك تتحسس من بعض المكونات ولا عادي؟\n3.  **وقت الاستعمال:** تحوسي على كريم تستعمليه في الصباح قبل المكياج، ولا كريم تاع الليل يغذي مليح، ولا كريم تقدري تستعمليه في أي وقت؟\n4.  **أشياء أخرى:** كاش عندك مشاكل أخرى مع الجفاف كيما الحكة، الإحمرار، ولا تبحثي على حاجة عندها مكونات معينة؟\n\nكي نعرف هاد التفاصيل، نقدر ننصحك بالكريم اللي يرجع بشرتك رطبة ومرتاحة ومشرقة. ماتقلقيش كامل، كاين حلول بزاف هايلين!",
+      "timestamp": "2025-11-19T23:08:51.302Z"
     }
   ],
-  "30d37704-aaf9-4ede-836f-97624088cbf4": [
+  "14630940-1550-450c-a361-fc45e6fa4aae": [
     {
       "role": "user",
-      "content": "السلام عليكم",
-      "timestamp": "2025-11-19T22:39:22.513Z"
+      "content": "نحتاج كريم للوجه",
+      "timestamp": "2025-11-19T23:40:46.614Z"
     },
     {
       "role": "model",
-      "content": "وعليكم السلام ورحمة الله! أهلا وسهلا بيك أختي، مرحبا بيك في محلنا. ان شاء الله تكوني بخير وعلى خير.\nأنا هنا نساعدك في أي حاجة تحتاجيها بخصوص صحتك، جمالك ولا راحتك النفسية. قوليلي واش تقدري تحتاجي، راني هنا باش نسمعلك ونفيدك واش كاين في خاطرِك؟",
-      "timestamp": "2025-11-19T22:39:24.092Z"
+      "content": "أهلاً بيك مدام! مرحبا بيك عندنا.\n\"كريم للوجه\"؟ مليح بزاف! كاين بزاف أنواع تاع لي كريم، وكل واحد عندو خدمة معينة.\n\nباش نقدر نعاونك ونلقاولك الكريم لي يناسبك تماماً، قوليلي برك:\n*   نوع البشرة تاعك كيفاش راهي؟ (جافة، دهنية، مختلطة، حساسة)\n*   واش راكي تحوسي على وجه التحديد في هذا الكريم؟ (ترطيب يومي، حاجة للتفتيح، تقليل التجاعيد، ولا عندك مشكل معين كيما الحبوب ولا الاحمرار؟)\n\nهكذا نفهم واش تحتاجي بالضبط، وننصحك بحاجة فور كيما تستاهلي. واش رايك؟",
+      "timestamp": "2025-11-19T23:40:49.757Z"
+    }
+  ],
+  "4b7c88e1-b2f7-4068-bfa3-27eff7c46e97": [
+    {
+      "role": "user",
+      "content": "نحتاج كريم للوجه",
+      "timestamp": "2025-11-19T23:50:43.040Z"
+    },
+    {
+      "role": "model",
+      "content": "السلام عليكم أختي، مرحبا بيك! إن شاء الله تكوني بخير يا رب.\n\nكي قلتيلي راكي تحتاجي كريم للوجه، هادي حاجة مليحة بزاف! بصح تعرفي، كاين بزاف أنواع تاع لي كريم، وكل واحد فيهم مخدوم لحاجة معينة ولنوع بشرة معين.\n\nباش نقدر نساعدك ونمدلك الكريم لي يناسبك بالضبط ويحل المشاكل تاع بشرتك، قوليلي برك:\n\n1.  **كيفاش نوع البشرة تاعك؟** دهنية (مزيتة)، جافة (ناشفة)، مختلطة، ولا حساسة؟\n2.  **وواش راكي حابة تحصلي منو بالضبط؟** حابة ترطيب عميق، تعالجي حب الشباب، تقللي من التجاعيد، تفتحي البشرة، ولا حابة تعطيها نضارة وإشراقة؟\n\nكي نعرف هاد التفاصيل، نقدر نمدلك أحسن توصية لي تخليك راضية 100%! تفضلي قوليلي واش راه في بالك، راني نسمعلك؟",
+      "timestamp": "2025-11-19T23:50:49.812Z"
+    }
+  ],
+  "621f29dc-489f-4498-acc1-b8b2c11aa44d": [
+    {
+      "role": "user",
+      "content": "نحتاج كريم للوجه",
+      "timestamp": "2025-11-19T23:51:47.242Z"
+    },
+    {
+      "role": "model",
+      "content": "أهلاً بيك مدام! مرحبا بك في بوتيكنا.\n\nكي راكي؟ يا مدام على كريم الوجه، كاين بزاف أنواع وكل واحد وش يصلحلو. باش نقدر نعاونك مليح ونختارولك الكريمة لي تناسبك تماماً، قوليلي برك واش هو نوع بشرتك؟ (دهنية، جافة، مختلطة، حساسة...)؟\n\nوواش هي الحاجة لي راكي تحوسي عليها بالظبط في الكريم هذا؟ حابة ترطيب، تفتيح، علاج لحبوب، ولا مثلاً حاجة للتجاعيد؟ هكذا نعرفو واش نلقاولك.",
+      "timestamp": "2025-11-19T23:51:50.141Z"
     }
   ]
 }

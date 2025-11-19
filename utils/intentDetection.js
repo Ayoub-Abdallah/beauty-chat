@@ -92,14 +92,51 @@ function detectIntent(message, conversationHistory = []) {
     }
   }
   
+  // Product Search Intent - User looking for products  
+  const productSearchKeywords = [
+    // Arabic - need/want
+    'نحتاج', 'نبغي', 'بغيت', 'عندكم', 'تعطيني', 'واش عندك',
+    'عندك', 'عندكم شي',
+    // French  
+    'je cherche', 'j\'ai besoin', 'vous avez', 'donnez-moi', 
+    'il me faut', 'je veux',
+    // English
+    'i need', 'looking for', 'want', 'looking for', 'give me'
+  ];
+  
+  // Product type keywords
+  const productTypes = [
+    // Arabic
+    'كريم', 'سيروم', 'شامبو', 'ماسك', 'زيت', 'صابون', 'لوسيون',
+    'منتج', 'منتجات', 'حاجة', 'شي حاجة',
+    // French  
+    'crème', 'sérum', 'shampooing', 'shampoing', 'masque', 'huile', 'savon', 'lotion',
+    'produit', 'produits', 'quelque chose',
+    // English
+    'cream', 'serum', 'product', 'something', 'shampoo', 'mask', 'oil'
+  ];
+  
+  // Check if message contains both need/want AND product type
+  const hasNeedWord = productSearchKeywords.some(keyword => lowerMessage.includes(keyword));
+  const hasProductType = productTypes.some(keyword => lowerMessage.includes(keyword));
+  
+  if (hasNeedWord && hasProductType) {
+    return 'recommendation';
+  }
+  
+  // Also check standalone product type mentions (implicit search)
+  if (hasProductType) {
+    return 'implicit_recommendation';
+  }
+  
   // Explicit Recommendation Intent
   const recommendKeywords = [
     // Arabic
     'نصحني', 'تنصحني', 'واش تنصح', 'شنو خير', 'شنو أحسن',
-    'بش نصلح', 'علاجي', 'routine', 'روتين', 'نحتاج',
+    'بش نصلح', 'علاجي', 'routine', 'روتين',
     'عندي مشكل', 'عندي مشكلة', 'ساعدني',
     // French
-    'conseille', 'recommande', 'suggère', 'aide-moi', 'j\'ai besoin',
+    'conseille', 'recommande', 'suggère', 'aide-moi',
     'j\'ai un problème', 'routine', 'solution', 'que faire',
     // English
     'recommend', 'suggest', 'advise', 'help me', 'what should',
