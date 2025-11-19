@@ -48,34 +48,90 @@ function getRelevantEntries(message, top = 3) {
 }
 
 /**
- * Enhanced Gemini API integration with conversation context
+ * Sleep utility for retry delays
+ */
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+/**
+ * Enhanced Gemini API integration with retry logic and fallback models
  * @param {string} contextualPrompt - Full prompt including system instructions and conversation history
  * @param {string} currentMessage - Current user message
+ * @param {number} retryCount - Current retry attempt (default: 0)
  * @returns {string} AI response text
  */
-async function callGemini(contextualPrompt, currentMessage) {
-  try {
-    const { GoogleGenAI } = require('@google/genai');
-    const apiKey = process.env.GEMINI_API_KEY;
-    if (!apiKey) throw new Error('GEMINI_API_KEY not set');
-    
-    const ai = new GoogleGenAI({ apiKey });
-    const model = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
-    
-    // Build the full prompt with context and current message
-    const fullPrompt = `${contextualPrompt}\nClient: ${currentMessage}\n\nConsultant:`;
-    
-    const response = await ai.models.generateContent({
-      model,
-      contents: fullPrompt,
-    });
-    
-    return response.text;
-  } catch (e) {
-    console.warn('Gemini call failed or not configured, falling back to contextual echo. Error:', e.message);
-    // Enhanced fallback that maintains conversation context awareness
-    return `[Mode écho avec contexte] Je comprends votre question dans le contexte de notre conversation. ${currentMessage.includes('ر') || currentMessage.includes('ت') ? 'أعتذر، النظام في وضع التجربة حالياً.' : 'Désolé, le système est en mode test actuellement.'}`;
+async function callGemini(contextualPrompt, currentMessage, retryCount = 0) {
+  const { GoogleGenAI } = require('@google/genai');
+  const apiKey = process.env.GEMINI_API_KEY;
+  
+  if (!apiKey) {
+    console.error('❌ GEMINI_API_KEY not set in .env file');
+    throw new Error('GEMINI_API_KEY not set');
   }
+
+  // List of models to try in order (fallback cascade)
+  // Tested models that work with @google/genai v1beta
+  const models = [
+    process.env.GEMINI_MODEL || 'gemini-2.0-flash-exp',
+    'gemini-pro-latest',  // Most reliable fallback
+    'gemini-2.0-flash-exp' // Try experimental again as final fallback
+  ];
+  
+  const maxRetries = 3;
+  const baseDelay = 1000; // 1 second
+  
+  for (let attempt = 0; attempt <= maxRetries; attempt++) {
+    for (let modelIndex = 0; modelIndex < models.length; modelIndex++) {
+      const currentModel = models[modelIndex];
+      
+      try {
+        console.log(`🤖 Attempting Gemini API call [Attempt ${attempt + 1}/${maxRetries + 1}, Model: ${currentModel}]...`);
+        
+        const ai = new GoogleGenAI({ apiKey });
+        const fullPrompt = `${contextualPrompt}\nClient: ${currentMessage}\n\nConsultant:`;
+        
+        const response = await ai.models.generateContent({
+          model: currentModel,
+          contents: fullPrompt,
+        });
+        
+        console.log(`✅ Gemini API call successful with model: ${currentModel}`);
+        return response.text;
+        
+      } catch (error) {
+        const errorMessage = error.message || JSON.stringify(error);
+        const isOverloaded = errorMessage.includes('503') || 
+                           errorMessage.includes('overloaded') || 
+                           errorMessage.includes('UNAVAILABLE');
+        const isNotFound = errorMessage.includes('404') || errorMessage.includes('not found');
+        
+        console.warn(`⚠️  Model ${currentModel} failed:`, errorMessage);
+        
+        // If model not found, try next model immediately
+        if (isNotFound && modelIndex < models.length - 1) {
+          console.log(`⏭️  Model not found, trying next model...`);
+          continue;
+        }
+        
+        // If overloaded and we have retries left, wait and retry
+        if (isOverloaded && attempt < maxRetries) {
+          const delay = baseDelay * Math.pow(2, attempt); // Exponential backoff
+          console.log(`⏳ API overloaded. Waiting ${delay}ms before retry ${attempt + 2}/${maxRetries + 1}...`);
+          await sleep(delay);
+          break; // Break model loop to retry from first model
+        }
+        
+        // If it's the last attempt and last model, throw the error
+        if (attempt === maxRetries && modelIndex === models.length - 1) {
+          throw error;
+        }
+      }
+    }
+  }
+  
+  // This should never be reached, but just in case
+  throw new Error('All retry attempts exhausted');
 }
 
 router.post('/', async (req, res) => {
@@ -133,8 +189,29 @@ Your personality: You are a warm, trustworthy Algerian beauty consultant in a re
   // Add current user message to history before getting AI response
   addMessageToHistory(currentSessionId, 'user', message);
 
-  // Get AI response with full context
-  const gResponse = await callGemini(contextualPrompt, message);
+  // Get AI response with full context and error handling
+  let gResponse;
+  try {
+    gResponse = await callGemini(contextualPrompt, message);
+  } catch (error) {
+    const errorMessage = error.message || JSON.stringify(error);
+    console.error('❌ All Gemini API attempts failed:', errorMessage);
+    
+    // Provide a helpful fallback response based on the error
+    const isOverloaded = errorMessage.includes('503') || 
+                        errorMessage.includes('overloaded') || 
+                        errorMessage.includes('UNAVAILABLE');
+    
+    if (isOverloaded) {
+      gResponse = language.includes('Arabic') 
+        ? `عذراً حبيبتي 🌸 النظام مشغول شوية دابا. ممكن تجربي بعد شوية؟ أو اسأليني بطريقة أخرى وراح نساعدك 💕`
+        : `Désolée ma chérie 🌸 Le système est un peu surchargé en ce moment. Pouvez-vous réessayer dans quelques instants? Ou posez votre question différemment et je vous aiderai 💕`;
+    } else {
+      gResponse = language.includes('Arabic')
+        ? `معليش، صار خلل صغير 😔 ممكن تعاودي السؤال؟`
+        : `Pardon, il y a eu un petit problème technique 😔 Pouvez-vous reformuler votre question?`;
+    }
+  }
   
   // Add AI response to history
   addMessageToHistory(currentSessionId, 'model', gResponse);
