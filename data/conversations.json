@@ -3,92 +3,56 @@
     {
       "role": "user",
       "content": "salam",
-      "timestamp": "2025-11-19T22:51:14.830Z"
+      "timestamp": "2025-11-20T01:36:40.792Z"
     },
     {
       "role": "model",
-      "content": "Salam alikoum! Bienvenue chez nous ! Je suis votre conseiller beauté et bien-être aujourd'hui. Comment puis-je vous aider ? N'hésitez surtout pas à me dire ce qui vous amène, je suis là pour vous écouter et vous accompagner au mieux.",
-      "timestamp": "2025-11-19T22:51:17.096Z"
+      "content": "Ahlan wa sahlan ! Salam alikoum ! Content de vous voir ici.\n\nJe suis votre conseiller en santé, beauté et bien-être, à votre entière disposition. Dites-moi, comment puis-je vous aider aujourd'hui ? Vous cherchez un produit spécifique, vous avez des préoccupations pour votre peau, vos cheveux, ou juste envie de découvrir nos nouveautés ? N'hésitez surtout pas à me dire ce qui vous ferait plaisir !",
+      "timestamp": "2025-11-20T01:36:44.049Z"
     },
     {
       "role": "user",
-      "content": "ma peau est seche",
-      "timestamp": "2025-11-19T22:51:34.342Z"
+      "content": "وشنو أحسن كريم للبشرة الجافة؟\"",
+      "timestamp": "2025-11-20T01:36:49.013Z"
     },
     {
       "role": "model",
-      "content": "Ah, d'accord ! La peau sèche, c'est une préoccupation très fréquente, surtout avec nos changements de temps. Je comprends tout à fait.\n\nPour bien vous orienter, est-ce que vous pourriez me dire un petit peu plus ? Par exemple, est-ce que c'est une sécheresse que vous avez depuis longtemps, ou c'est quelque chose de plus récent ? Et comment vous la ressentez ? Est-ce qu'elle tire, elle démange, ou elle pèle un peu par endroits ?\n\nN'hésitez pas à me donner le plus de détails possible, comme ça je pourrai vous aider à trouver la meilleure solution pour que votre peau retrouve tout son confort et son éclat !",
-      "timestamp": "2025-11-19T22:51:38.817Z"
+      "content": "Ahlan ya khti! Mrahba bik. Sou'al mlih bezaf! Lejfaf ta3 el bchra hada sah y'dir el 3ya, surtout ki matelqaych la crème li twatek. Bsahtek ki raki tekhmemi f rohek w bghiti tebday tahtammi biha.\n\nBch nqder n'kheyerlek ahessan kréma l'bchra jaffa, lazem nafham chwiya akter 3la chnahouwa naw3 lejfaf li raki t3ani mennou. Ya3ni, est-ce que hiya ghir nachefa chwiya, wela tqacher, t'hechem, t'jbed, wela hta fiha des zones sensibles? Kayen des peaux sèches li ykounou sensibles, w kayen des peaux sèches bark.\n\nKoulili khti, wach hiya les symptômes exactes li t'hessi bihoum? Bch nqder n'3tik conseil yelzemlak nti exact!",
+      "timestamp": "2025-11-20T01:36:56.393Z"
     },
     {
       "role": "user",
-      "content": "tu me conseil qoui",
-      "timestamp": "2025-11-19T22:51:52.845Z"
+      "content": "hasasa w jafa",
+      "timestamp": "2025-11-20T01:38:19.016Z"
     },
     {
       "role": "model",
-      "content": "Ah, super question ! D'accord, je comprends tout à fait que tu veuilles savoir par où commencer. Puisque tu m'as dit que ta peau est sèche, la première étape, et la plus importante, c'est le nettoyage. Il faut absolument un produit qui nettoie en douceur, sans la décaper ni l'assécher encore plus.\n\nPour ça, je te conseillerais un excellent produit qu'on a ici : le **La Roche-Posay Toleriane Caring Wash**. C'est un gel nettoyant ultra-doux, spécialement formulé pour les peaux sensibles et intolérantes, donc parfait pour une peau sèche comme la tienne.\n\nCe qui est génial avec ce produit, c'est qu'il est sans savon, sans paraben et sans alcool. Ça veut dire qu'il respecte vraiment ta peau, il ne la tire pas et ne la laisse pas inconfortable après le lavage. En plus, il contient de l'eau thermale qui apaise. C'est comme une petite caresse pour ton visage !\n\nIl coûte **3200 DA**. Tu peux l'utiliser matin et soir : tu masses délicatement sur ton visage, puis tu rinces à l'eau tiède.\n\nQu'est-ce que tu en penses pour commencer ? Et dis-moi, est-ce que tu te maquilles parfois ? Ça m'aiderait à te donner une recommandation complète pour ta routine !",
-      "timestamp": "2025-11-19T22:51:59.288Z"
+      "content": "Ah ya khti! Sahiti ki warrittili had le point important. Donc, machi ghir jaffa, mais aussi **hassasa**! Hadha yghayyer chwiya le plan ta3na, w lazem nakhtarou haja tkoun hyper douce w tahafedh 3la el bchra. Mlih bezaf ki qoltili hada, bch nqder n'kheyerlek l'anormal.\n\nKi tkoun el bchra jaffa w hassasa f'nafs el waqt, lazemlek des produits li maykounouch y'jewfouha wla yehyedjouha. Kayen des ingrédients li lazem nvitewhoum, w nerkzou 3la des formules li t'koun m'hadya w t'rejja3 el confort lel bchra.\n\nAna n'sahlek bezaf b'un produit li hna f'safran kima el ma w l'hawa, w bezaf ness y'hamlouh: c'est le **La Roche-Posay Toleriane Caring Wash**.\n\nHada, machi ghir nettoyant (saha, c'est pas une crème direct, mais c'est la première étape w hiya la plus importante!), mais c'est un gel ghassoul ultra-doux, spesyalement m'khadem l'les peaux sensibles w li makich t'hamli les produits. La formule ta3ou sans savon, sans paraben, sans alcool... ya3ni ma fiha walou li y'9der yehyedj wela y'jefef el bchra. Fih ghir les choses li t'sahhel 3likom, kima l'eau thermale, bach y'haddi w y'khali el bchra mrtaha.\n\nThassit bih el bchra ta3ek t'safi w t'rqaqa men ghir ma thassi biha t'jbed wela t'qacher. Price ta3ou raho **3200 DA**.\n\nWach rayek f'had el nettoyant bch nabdaw bih? Wela nti qoltilna rakki t'hossi 3la crème après? Nqder nzid n'kheyerlek une crème li tmchi m3ah parfaitement bch t'kamel el routine ta3ek!",
+      "timestamp": "2025-11-20T01:38:25.681Z"
     }
   ],
-  "38ed0a3f-bb69-4783-b80b-4a610c3ee099": [
+  "a5e255af-80c8-4942-a665-af7eb2adefa2": [
     {
       "role": "user",
-      "content": "نحتاج كريم للوجه",
-      "timestamp": "2025-11-19T22:58:21.262Z"
+      "content": "وشنو أحسن كريم للبشرة الجافة؟",
+      "timestamp": "2025-11-20T02:44:02.660Z"
     },
     {
       "role": "model",
-      "content": "أهلاً بيك مدام! مرحبا بك عندنا.\n\nبصحتك، راكي تحوسي على كريم للوجه. كاين بزاف أنواع وكل واحد واش يواليه، على حساب بشرتك واش تحتاج.\n\nيا ترى نوع بشرتك ناشفة، دهنية، مختلطة، ولا حساسة؟ وراكي تحوسي على كريم يرطب، يبيض، يعالج حب الشباب، ولا حاجة لمكافحة التجاعيد مثلاً؟ باش نقدر نساعدك خير ونلقاولك واش يخرج عليك نيشان.",
-      "timestamp": "2025-11-19T22:58:24.078Z"
+      "content": "يا أهلاً و سهلاً بيك! سؤالك هذا بزاف مهم، و على بالي بلي بزاف ناس يعانيو من مشكل البشرة الجافة.\n\nبصح باش نقدر نعاونك صح و نلقالك الكريمة المثالية لي تناسبك نتي بالذات، نحتاج منك شوية تفاصيل. تقدري تقوليلي: البشرة ديالك جافة برك ولا جافة و حساسة؟ كاش مشاكل أخرى فيها كيما تقشير، حكة، ولا تشقق؟ و ثاني، كاش ميزانية معينة حاطتها في بالك؟\n\nعطيني غير شوية وقت برك، راني نشوفلك في المنتجات المتوفرة في الكاتالوغ ديالنا باش نلقاو واش يناسبك بالضبط.\n\nواش رايك، تقدري تقوليلي أكثر على احتياجاتك باش نلقاو الحاجة المثالية ليك؟",
+      "timestamp": "2025-11-20T02:44:09.397Z"
     }
   ],
-  "69c2cf54-1633-46d3-9d9f-66b32f731536": [
+  "de3778e6-ac0c-4581-b569-200127a3d5a9": [
     {
       "role": "user",
-      "content": "شنو أحسن كريم للبشرة الجافة؟",
-      "timestamp": "2025-11-19T23:08:45.743Z"
+      "content": "وشنو أحسن كريم للبشرة الجافة؟",
+      "timestamp": "2025-11-20T02:45:06.002Z"
     },
     {
       "role": "model",
-      "content": "أهلاً وسهلاً بيك يا لالة! سؤالك مهم بزاف على أحسن كريم للبشرة الجافة، وبصحتك راكي تهتمي ببشرتك.\n\nكاين بزاف كريمات هايلين ومناسبين للبشرة الجافة، لكن باش نقدر نختارلك الأنسب ليك، لازم نعرف شوية تفاصيل عليك. كل بشرة عندها احتياجاتها الخاصة.\n\nممكن تقوليلي:\n1.  **نوع الجفاف:** بشرتك جافة بزاف لدرجة تحسي فيها بالشد أو التقشر، ولا جفاف خفيف برك؟\n2.  **الحساسية:** بشرتك تتحسس من بعض المكونات ولا عادي؟\n3.  **وقت الاستعمال:** تحوسي على كريم تستعمليه في الصباح قبل المكياج، ولا كريم تاع الليل يغذي مليح، ولا كريم تقدري تستعمليه في أي وقت؟\n4.  **أشياء أخرى:** كاش عندك مشاكل أخرى مع الجفاف كيما الحكة، الإحمرار، ولا تبحثي على حاجة عندها مكونات معينة؟\n\nكي نعرف هاد التفاصيل، نقدر ننصحك بالكريم اللي يرجع بشرتك رطبة ومرتاحة ومشرقة. ماتقلقيش كامل، كاين حلول بزاف هايلين!",
-      "timestamp": "2025-11-19T23:08:51.302Z"
-    }
-  ],
-  "14630940-1550-450c-a361-fc45e6fa4aae": [
-    {
-      "role": "user",
-      "content": "نحتاج كريم للوجه",
-      "timestamp": "2025-11-19T23:40:46.614Z"
-    },
-    {
-      "role": "model",
-      "content": "أهلاً بيك مدام! مرحبا بيك عندنا.\n\"كريم للوجه\"؟ مليح بزاف! كاين بزاف أنواع تاع لي كريم، وكل واحد عندو خدمة معينة.\n\nباش نقدر نعاونك ونلقاولك الكريم لي يناسبك تماماً، قوليلي برك:\n*   نوع البشرة تاعك كيفاش راهي؟ (جافة، دهنية، مختلطة، حساسة)\n*   واش راكي تحوسي على وجه التحديد في هذا الكريم؟ (ترطيب يومي، حاجة للتفتيح، تقليل التجاعيد، ولا عندك مشكل معين كيما الحبوب ولا الاحمرار؟)\n\nهكذا نفهم واش تحتاجي بالضبط، وننصحك بحاجة فور كيما تستاهلي. واش رايك؟",
-      "timestamp": "2025-11-19T23:40:49.757Z"
-    }
-  ],
-  "4b7c88e1-b2f7-4068-bfa3-27eff7c46e97": [
-    {
-      "role": "user",
-      "content": "نحتاج كريم للوجه",
-      "timestamp": "2025-11-19T23:50:43.040Z"
-    },
-    {
-      "role": "model",
-      "content": "السلام عليكم أختي، مرحبا بيك! إن شاء الله تكوني بخير يا رب.\n\nكي قلتيلي راكي تحتاجي كريم للوجه، هادي حاجة مليحة بزاف! بصح تعرفي، كاين بزاف أنواع تاع لي كريم، وكل واحد فيهم مخدوم لحاجة معينة ولنوع بشرة معين.\n\nباش نقدر نساعدك ونمدلك الكريم لي يناسبك بالضبط ويحل المشاكل تاع بشرتك، قوليلي برك:\n\n1.  **كيفاش نوع البشرة تاعك؟** دهنية (مزيتة)، جافة (ناشفة)، مختلطة، ولا حساسة؟\n2.  **وواش راكي حابة تحصلي منو بالضبط؟** حابة ترطيب عميق، تعالجي حب الشباب، تقللي من التجاعيد، تفتحي البشرة، ولا حابة تعطيها نضارة وإشراقة؟\n\nكي نعرف هاد التفاصيل، نقدر نمدلك أحسن توصية لي تخليك راضية 100%! تفضلي قوليلي واش راه في بالك، راني نسمعلك؟",
-      "timestamp": "2025-11-19T23:50:49.812Z"
-    }
-  ],
-  "621f29dc-489f-4498-acc1-b8b2c11aa44d": [
-    {
-      "role": "user",
-      "content": "نحتاج كريم للوجه",
-      "timestamp": "2025-11-19T23:51:47.242Z"
-    },
-    {
-      "role": "model",
-      "content": "أهلاً بيك مدام! مرحبا بك في بوتيكنا.\n\nكي راكي؟ يا مدام على كريم الوجه، كاين بزاف أنواع وكل واحد وش يصلحلو. باش نقدر نعاونك مليح ونختارولك الكريمة لي تناسبك تماماً، قوليلي برك واش هو نوع بشرتك؟ (دهنية، جافة، مختلطة، حساسة...)؟\n\nوواش هي الحاجة لي راكي تحوسي عليها بالظبط في الكريم هذا؟ حابة ترطيب، تفتيح، علاج لحبوب، ولا مثلاً حاجة للتجاعيد؟ هكذا نعرفو واش نلقاولك.",
-      "timestamp": "2025-11-19T23:51:50.141Z"
+      "content": "أهلاً بيك/بِيكِ! مرحبا بيك عندنا. كيفاش راك/راكي؟ ان شاء الله تكوني بخير.\n\nفهمت سؤالك، راك/راكي تحوسي على أحسن كريم للبشرة الجافة، وهادي حاجة بزاف مهمة وضرورية للعناية بالبشرة ديالنا، خاصةً مع الجو تاعنا في الجزائر، على بالي شحال صعيب تلقى المنتج المناسب اللي يريحك ويغذي بشرتك.\n\nصراحة، كان عندنا واحد المرطب هايل وممتاز بزاف للبشرة الجافة والحساسة، واسمو \"مرطب خالي من العطور للبشرة الجافة الحساسة\"، لي كان يدير 2800 دج. هذا كان بزاف مطلوب وينصحوا بيه حتى لأصحاب الإكزيما لأنه غني بزاف ويرطب بعمق. بصح للأسف الشديد، راهو مخلص دروك عندنا.\nوكاين تاني \"لوشن أطفال عضوي - خالي من العطور\" لي كان ثاني فعال بزاف للبشرة الحساسة والجافة وحتى للإكزيما، وممكن الكبار يستعملوه عادي لأنه طبيعي وآمن، وكان بسعر 1800 دج. هذا ثاني راهو مخلص حاليًا.\n\nمي ما تخممش/تخمّيش خلاص! أنا هنا باش نعاونك نلقاو الحلول المناسبة لبشرتك. مادام هادو راهم مخلصين، أكيد كاين بدائل أخرى ممتازة نقدر ننصحك بيها، لي تغذي بشرتك الجافة وتخليها رطبة ومحمية.\n\nباش نقدر نمدلك أحسن نصيحة، ممكن تقوليلي شوية تفاصيل على بشرتك؟ مثلاً، جفافها حاد بزاف ولا خفيف؟ وهل عندك حساسية معينة ولا مشكل واحد آخر تحبي نعاونك فيه؟ هكا نلقاو بالضبط واش يليقلك.\n\nواش رايك؟ أنا في الخدمة!",
+      "timestamp": "2025-11-20T02:45:27.024Z"
     }
   ]
 }

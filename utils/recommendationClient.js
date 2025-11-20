@@ -9,29 +9,42 @@ const RECOMMENDATION_URL = process.env.RECOMMENDATION_URL || 'http://localhost:4
 
 /**
  * Get product recommendations from microservice
- * @param {Object} summary - Conversation summary
+ * @param {Object} requestPayload - Request with query, language, intent, conversationHistory
  * @returns {Promise<Array>} - Recommended products
  */
-async function getRecommendations(summary) {
+async function getRecommendations(requestPayload) {
   try {
     console.log(`🔍 Calling recommendation API: ${RECOMMENDATION_URL}/recommend`);
     
-    const response = await axios.post(`${RECOMMENDATION_URL}/recommend`, summary, {
+    const response = await axios.post(`${RECOMMENDATION_URL}/recommend`, requestPayload, {
       timeout: 10000, // 10 second timeout
       headers: {
         'Content-Type': 'application/json'
       }
     });
     
-    if (response.data && response.data.recommendations) {
-      console.log(`✅ Got ${response.data.recommendations.length} recommendations`);
-      return response.data.recommendations;
+    // Handle different response formats
+    if (response.data) {
+      // If response has recommendations array
+      if (response.data.recommendations) {
+        console.log(`✅ Got ${response.data.recommendations.length} recommendations`);
+        return response.data.recommendations;
+      }
+      // If response is array directly
+      if (Array.isArray(response.data)) {
+        console.log(`✅ Got ${response.data.length} recommendations`);
+        return response.data;
+      }
     }
     
     return [];
     
   } catch (error) {
-    console.warn('⚠️ Recommendation API call failed:', error.message);
+    if (error.response) {
+      console.warn(`⚠️ Recommendation API error ${error.response.status}:`, error.response.data);
+    } else {
+      console.warn('⚠️ Recommendation API call failed:', error.message);
+    }
     
     // Return empty array - chat will continue with knowledge base fallback
     return [];

@@ -177,15 +177,22 @@ router.post('/', async (req, res) => {
     try {
       console.log(`📞 Calling recommendation API for intent: ${intent}`);
       
-      // Prepare conversation summary for better recommendations
-      const summaryText = conversationHistory.length > 0 
-        ? conversationHistory.slice(-4).map(m => m.content).join(' ') + ' ' + message
-        : message;
-      console.log(`📝 Search query: ${summaryText.substring(0, 100)}...`);
+      // Prepare request payload for recommendation API
+      const requestPayload = {
+        query: message,
+        language: languageCode,
+        intent: intent,
+        conversationHistory: conversationHistory.slice(-4).map(m => ({
+          role: m.role,
+          content: m.content
+        }))
+      };
+      
+      console.log(`📝 API Request - Query: "${message}" | Intent: ${intent} | Language: ${languageCode}`);
       
       // Call recommendation API
-      const apiResponse = await getRecommendations(summaryText, message, languageCode);
-      products = apiResponse.recommendations || [];
+      const apiProducts = await getRecommendations(requestPayload);
+      products = apiProducts || [];
       
       console.log(`✅ Got ${products.length} product recommendations from API`);
     } catch (error) {
@@ -200,15 +207,44 @@ router.post('/', async (req, res) => {
   const searchContext = conversationHistory.length > 0 
     ? message + ' ' + conversationHistory.slice(-4).map(msg => msg.content).join(' ')
     : message;
-  const relevant = getRelevantEntries(searchContext, 3);
-  const contextText = relevant.map(r => `Produit: ${r.title}\nDescription: ${r.content}\nTags: ${(r.tags||[]).join(', ')}\n---`).join('\n');
+  
+  // Only use knowledge base for non-product intents (general questions, safety, etc.)
+  let contextText = '';
+  if (!shouldCallAPI || intent === 'chat') {
+    const relevant = getRelevantEntries(searchContext, 3);
+    contextText = relevant.map(r => `Info: ${r.title}\nDetails: ${r.content}\n---`).join('\n');
+  }
 
   // Add API product recommendations to context
   let apiProductsText = '';
-  if (products.length > 0) {
-    apiProductsText = '\n\nRECOMMENDED PRODUCTS FROM CATALOG:\n' + products.map((p, idx) => 
-      `${idx + 1}. ${p.name || p.title}\n   Price: ${p.price} DA\n   ${p.description}\n   ${p.inStock ? '✅ In Stock' : '❌ Out of Stock'}`
-    ).join('\n\n');
+  let productInstructions = '';
+  
+  if (shouldCallAPI) {
+    if (products.length > 0) {
+      // We have products from API - use them!
+      apiProductsText = '\n\n🎯 RECOMMENDED PRODUCTS FROM CATALOG (PRIORITIZE THESE):\n' + products.map((p, idx) => 
+        `${idx + 1}. ${p.name || p.title}\n   Price: ${p.price} DA\n   ${p.description}\n   ${p.inStock ? '✅ In Stock - Encourage immediate purchase!' : '❌ Out of Stock - Suggest alternatives'}`
+      ).join('\n\n');
+      
+      productInstructions = `
+CRITICAL PRODUCT RECOMMENDATION RULES:
+- You MUST recommend products from the "RECOMMENDED PRODUCTS FROM CATALOG" section above
+- These products are specifically selected by our recommendation system for this customer
+- Mention 2-3 products from the list with prices
+- Highlight benefits and create urgency
+- Ask if they want to purchase
+`;
+    } else {
+      // API failed - inform user politely
+      productInstructions = `
+⚠️ IMPORTANT: Product recommendation system is currently unavailable.
+- Politely inform the customer that you need a moment to check product availability
+- Ask them to describe their needs in detail (skin type, concerns, budget)
+- Suggest they wait briefly while you check the catalog
+- DO NOT make up product names or prices
+- Keep response SHORT and focused on gathering information
+`;
+    }
   }
 
   // Build comprehensive system prompt with role definition
@@ -220,15 +256,12 @@ IMPORTANT CONVERSATION RULES:
 - Reply in ${language}, using simple and natural expressions that feel human and localized for Algeria
 - Remember and reference previous parts of our conversation when relevant
 - Build on topics we've already discussed
-- If the client mentioned specific skin concerns, products, or preferences before, acknowledge them
-- Use the product knowledge base to provide accurate recommendations with DA pricing
-${products.length > 0 ? '- PRIORITIZE recommending the products listed in "RECOMMENDED PRODUCTS FROM CATALOG" section below - these are specifically selected for this customer' : ''}
+${productInstructions}
 - Always end with a helpful question or offer to maintain conversation flow
 - Be consistent with your previous advice and recommendations
 - Be persuasive but natural - highlight benefits, create urgency, and encourage purchase
 
-Available Products in Our Shop:
-${contextText}${apiProductsText}
+${contextText ? 'General Information:\n' + contextText : ''}${apiProductsText}
 
 Your personality: You are a warm, trustworthy Algerian beauty consultant in a real beauty shop. Maintain a consistent, caring relationship with each client throughout the conversation.`;
 

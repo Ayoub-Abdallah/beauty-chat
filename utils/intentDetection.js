@@ -132,14 +132,16 @@ function detectIntent(message, conversationHistory = []) {
   // Explicit Recommendation Intent
   const recommendKeywords = [
     // Arabic
-    'نصحني', 'تنصحني', 'واش تنصح', 'شنو خير', 'شنو أحسن',
+    'نصحني', 'تنصحني', 'واش تنصح', 'شنو خير', 'شنو أحسن', 'أحسن',
+    'وشنو أحسن', 'إيش أحسن', 'شو أحسن', 'وين نلقى',
     'بش نصلح', 'علاجي', 'routine', 'روتين',
     'عندي مشكل', 'عندي مشكلة', 'ساعدني',
     // French
-    'conseille', 'recommande', 'suggère', 'aide-moi',
+    'conseille', 'recommande', 'suggère', 'aide-moi', 'meilleur', 'le meilleur',
+    'c\'est quoi le meilleur', 'quel est le meilleur',
     'j\'ai un problème', 'routine', 'solution', 'que faire',
     // English
-    'recommend', 'suggest', 'advise', 'help me', 'what should',
+    'recommend', 'suggest', 'advise', 'help me', 'what should', 'best', 'what\'s the best',
     'i need help', 'problem', 'issue'
   ];
   
@@ -154,14 +156,17 @@ function detectIntent(message, conversationHistory = []) {
     // Skin issues (Arabic)
     'بشرة جافة', 'جافة', 'بشرة دهنية', 'دهنية', 'حبوب', 'بثور',
     'بقع', 'تجاعيد', 'هالات', 'سوداء', 'شعر خشن', 'تساقط',
-    'قشرة', 'عيان', 'تعبان', 'ضعيف',
+    'قشرة', 'عيان', 'تعبان', 'ضعيف', 'حساسة', 'حساسية',
+    'للبشرة', 'للشعر', 'للوجه', 'للجسم',
     // Skin issues (French)
     'peau sèche', 'sèche', 'peau grasse', 'grasse', 'acné', 'boutons',
     'taches', 'rides', 'cernes', 'cheveux secs', 'chute de cheveux',
-    'pellicules', 'fatigué', 'fatigue',
+    'pellicules', 'fatigué', 'fatigue', 'sensible', 'sensitive',
+    'pour la peau', 'pour les cheveux', 'pour le visage',
     // Skin issues (English)
     'dry skin', 'oily skin', 'acne', 'pimples', 'dark spots', 'wrinkles',
-    'dark circles', 'hair fall', 'dandruff', 'tired',
+    'dark circles', 'hair fall', 'dandruff', 'tired', 'sensitive',
+    'for skin', 'for hair', 'for face',
     // Goals/desires
     'تبييض', 'تفتيح', 'ترطيب', 'نعومة', 'لمعان', 'صحة',
     'blanchir', 'hydrater', 'éclaircir', 'brillance', 'santé',
