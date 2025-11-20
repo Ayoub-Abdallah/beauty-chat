@@ -210,8 +210,9 @@ router.post('/', async (req, res) => {
   
   // Only use knowledge base for non-product intents (general questions, safety, etc.)
   let contextText = '';
+  let relevant = [];
   if (!shouldCallAPI || intent === 'chat') {
-    const relevant = getRelevantEntries(searchContext, 3);
+    relevant = getRelevantEntries(searchContext, 3);
     contextText = relevant.map(r => `Info: ${r.title}\nDetails: ${r.content}\n---`).join('\n');
   }
 
