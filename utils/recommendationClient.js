@@ -14,7 +14,14 @@ const RECOMMENDATION_URL = process.env.RECOMMENDATION_URL || 'http://localhost:4
  */
 async function getRecommendations(requestPayload) {
   try {
-    console.log(`🔍 Calling recommendation API: ${RECOMMENDATION_URL}/recommend`);
+
+    console.log('\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
+    console.log('🔍 CALLING RECOMMENDATION SYSTEM');
+    console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
+    console.log('📍 URL:', `${RECOMMENDATION_URL}/recommend`);
+    console.log('📦 REQUEST PAYLOAD:');
+    console.log(JSON.stringify(requestPayload, null, 2));
+    console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n');
     
     const response = await axios.post(`${RECOMMENDATION_URL}/recommend`, requestPayload, {
       timeout: 10000, // 10 second timeout
@@ -23,28 +30,48 @@ async function getRecommendations(requestPayload) {
       }
     });
     
+    console.log('\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
+    console.log('✅ RECOMMENDATION SYSTEM RESPONSE');
+    console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
+    console.log('📦 FULL RESPONSE DATA:');
+    console.log(JSON.stringify(response.data, null, 2));
+    console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n');
+    
     // Handle different response formats
     if (response.data) {
       // If response has recommendations array
       if (response.data.recommendations) {
-        console.log(`✅ Got ${response.data.recommendations.length} recommendations`);
+        console.log(`✅ Extracted ${response.data.recommendations.length} recommendations from response.data.recommendations`);
+        console.log('📋 Products:', response.data.recommendations.map(p => p.name || p.title).join(', '));
         return response.data.recommendations;
       }
       // If response is array directly
       if (Array.isArray(response.data)) {
-        console.log(`✅ Got ${response.data.length} recommendations`);
+        console.log(`✅ Extracted ${response.data.length} recommendations from response.data (array)`);
+        console.log('📋 Products:', response.data.map(p => p.name || p.title).join(', '));
         return response.data;
       }
     }
     
+    console.warn('⚠️ No recommendations found in response');
     return [];
     
   } catch (error) {
+    console.log('\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
+    console.log('❌ RECOMMENDATION SYSTEM ERROR');
+    console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
     if (error.response) {
-      console.warn(`⚠️ Recommendation API error ${error.response.status}:`, error.response.data);
+      console.log('🔴 Status:', error.response.status);
+      console.log('🔴 Status Text:', error.response.statusText);
+      console.log('🔴 Response Data:');
+      console.log(JSON.stringify(error.response.data, null, 2));
+    } else if (error.request) {
+      console.log('🔴 No response received from server');
+      console.log('🔴 Error:', error.message);
     } else {
-      console.warn('⚠️ Recommendation API call failed:', error.message);
+      console.log('🔴 Error:', error.message);
     }
+    console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n');
     
     // Return empty array - chat will continue with knowledge base fallback
     return [];

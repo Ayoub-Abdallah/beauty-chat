@@ -175,7 +175,7 @@ router.post('/', async (req, res) => {
   
   if (shouldCallAPI) {
     try {
-      console.log(`📞 Calling recommendation API for intent: ${intent}`);
+      console.log(`\n📞 Calling recommendation API for intent: ${intent}`);
       
       // Prepare request payload for recommendation API
       const requestPayload = {
@@ -194,13 +194,21 @@ router.post('/', async (req, res) => {
       const apiProducts = await getRecommendations(requestPayload);
       products = apiProducts || [];
       
-      console.log(`✅ Got ${products.length} product recommendations from API`);
+      if (products.length > 0) {
+        console.log(`\n✅ Successfully received ${products.length} product recommendations from API:`);
+        products.forEach((p, idx) => {
+          console.log(`   ${idx + 1}. ${p.name || p.title} - ${p.price} DA (${p.inStock ? 'In Stock' : 'Out of Stock'})`);
+        });
+        console.log('');
+      } else {
+        console.log(`\n⚠️  No products received from recommendation API (empty array returned)\n`);
+      }
     } catch (error) {
       console.warn(`⚠️ Recommendation API failed: ${error.message}`);
       // Continue without recommendations - Gemini will use knowledge base
     }
   } else {
-    console.log(`ℹ️  Skipping API call for intent: ${intent}`);
+    console.log(`ℹ️  Skipping API call for intent: ${intent} (not a product-related intent)`);
   }
 
   // Get top 3 relevant KB entries based on current message and recent conversation context
